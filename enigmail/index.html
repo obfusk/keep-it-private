@@ -29,9 +29,109 @@ Felix C. Stegerman `<flx@obfusk.net>`
 
 ---
 
-...
+layout: false
+
+# Table of Contents
+
+* [What's Enigmail/Thunderbird/OpenPGP/GnuPG?](#what)
+* [What is public key cryptography?](#crypto)
+* [Prerequisites](#prereq)
+* [Gmail Settings](#gmail)
+* [Setup Thunderbird w/ Gmail](#tb-setup)
+* [Install Enigmail](#enigmail-install)
+* [Configure Enigmail](#enigmail-config)
+* [Write Mail](#write-mail)
+* [Read Mail](#read-mail)
+* [Mail Source](#mail-source)
+* [Attachments](#attach)
+* [Signatures](#sigs)
+* [Key Management](#key-mgmt)
+* [Sign Key](#sign-key)
+* [Miscellaneous](#misc)
+* [Generate Key Manually](#gen-key)
+* [Links](#links)
 
 ---
+
+name: what
+
+# What's Enigmail?
+
+> Enigmail is a security extension to Mozilla Thunderbird (and
+Seamonkey) that enables you to write and receive email messages signed
+and/or encrypted with the OpenPGP standard (using GnuPG).
+
+# What's Thunderbird?
+
+> Mozilla Thunderbird is a free software cross-platform email, news,
+and chat client developed by the Mozilla Foundation.
+
+# What are OpenPGP and GnuPG?
+
+> OpenPGP is a standard protocol for encrypting email using public key
+cryptography.  It is based on PGP as originally developed by Phil
+Zimmermann.
+
+> GnuPG is a free software implementation of the OpenPGP standard.
+
+---
+
+template: default
+layout: true
+
+---
+
+name: crypto
+
+# What is public key cryptography?
+
+--> http://obfusk.github.io/keep-it-private/encryption
+
+---
+
+name: prereq
+layout: false
+
+# Prerequisites
+
+* Email Account (e.g. Gmail*)
+* Thunderbird
+* GnuPG
+
+## Linux
+
+You'll need thunderbird and gnupg -- see the [links](#links).  Most
+distributions' repositories provide both; e.g. Debian/Ubuntu:
+
+.medium[
+```
+apt-get install thunderbird gnupg
+```
+]
+
+## OS X**
+
+You'll need thunderbird and gpgtools -- see the [links](#links).
+
+## Windows**
+
+You'll need thunderbird and gpg4win -- see the [links](#links).
+
+.small[
+  \* although a more privacy-respecting provider (e.g. MyKolab) is
+  preferable
+
+  \** although a more privacy-respecting OS is preferable
+]
+
+---
+
+template: default
+layout: true
+
+---
+
+name: gmail
 
 # Gmail Settings
 
@@ -42,6 +142,8 @@ Felix C. Stegerman `<flx@obfusk.net>`
 .small[image #1 - Activate IMAP for Gmail]
 
 ---
+
+name: tb-setup
 
 # Setup Thunderbird w/ Gmail
 
@@ -71,6 +173,8 @@ Felix C. Stegerman `<flx@obfusk.net>`
 
 ---
 
+name: enigmail-install
+
 # Install Enigmail
 
 ---
@@ -86,6 +190,8 @@ Felix C. Stegerman `<flx@obfusk.net>`
 .small[image #7 - Restart Thunderbird after Enigmail Install]
 
 ---
+
+name: enigmail-config
 
 # Configure Enigmail
 
@@ -171,6 +277,8 @@ YMMV.
 
 ---
 
+name: write-mail
+
 # Write Mail
 
 ---
@@ -199,6 +307,8 @@ YMMV.
 
 ---
 
+name: read-mail
+
 # Read Mail
 
 ---
@@ -220,6 +330,8 @@ YMMV.
 .small[image #27 - Thunderbird Read - Unsigned & Unencrypted (Normal)]
 
 ---
+
+name: mail-source
 
 # Mail Source
 
@@ -348,6 +460,8 @@ layout: true
 
 ---
 
+name: attach
+
 # Attachments
 
 ---
@@ -357,6 +471,8 @@ layout: true
 .small[image #28 - Sending Encrypted Attachements]
 
 ---
+
+name: sigs
 
 # Signatures
 
@@ -379,6 +495,8 @@ layout: true
 .small[image #31 - Good Signature]
 
 ---
+
+name: key-mgmt
 
 # Key Management
 
@@ -436,6 +554,8 @@ layout: true
 
 ---
 
+name: sign-key
+
 # Sign Key
 
 ---
@@ -464,6 +584,8 @@ layout: true
 
 ---
 
+name: misc
+
 # Miscellaneous
 
 ---
@@ -489,6 +611,8 @@ are not in your web of trust).
 
 ---
 
+name: gen-key
+
 # Generate Key Manually
 
 ---
@@ -511,9 +635,8 @@ are not in your web of trust).
 
 ---
 
-...
-
----
+name: links
+layout: false
 
 # Links
 
@@ -522,7 +645,14 @@ are not in your web of trust).
 
 <!-- -->
 
-* ...
+* https://www.enigmail.net
+* http://www.mozilla.org/thunderbird
+
+<!-- -->
+
+* http://www.gnupg.org
+* https://gpgtools.org (OS X)
+* http://www.gpg4win.org (Windows)
 
     </textarea>
     <script src="../remark-0.5.9.min.js" type="text/javascript">

@@ -13,6 +13,8 @@
 
   keep-it-private - privacy/crypto presentations
 
+  * [encryption]
+    (http://obfusk.github.io/keep-it-private/encryption)
   * [enigmail]
     (http://obfusk.github.io/keep-it-private/enigmail)
   * [internet privacy]
