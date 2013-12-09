@@ -33,16 +33,25 @@
 
 ## License
 
-  GPLv2 [1].
-
-  key and padlock{,_open} images are public domain curtesy of
+  The key and padlock{,_open} images are public domain curtesy of
   Openclipart.
+
+  The "What is encryption?" quote comes from the Wikipedia article on
+  encryption [1].
+
+  Everything else: GPLv2 [2] or CC-BY-SA-3.0 [3].
 
 ## References
 []: {{{1
 
-  [1] GNU General Public License, version 2
+  [1] Wikipedia - Encryption
+  --- http://en.wikipedia.org/wiki/Encryption
+
+  [2] GNU General Public License, version 2
   --- http://www.opensource.org/licenses/GPL-2.0
+
+  [3] Creative Commons Attribution-ShareAlike 3.0 Unported
+  --- http://creativecommons.org/licenses/by-sa/3.0
 
 []: }}}1
 
