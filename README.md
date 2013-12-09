@@ -31,6 +31,9 @@
 
   GPLv2 [1].
 
+  key and padlock{,_open} images are public domain curtesy of
+  Openclipart.
+
 ## References
 []: {{{1
 

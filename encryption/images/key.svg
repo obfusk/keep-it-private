@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="100.55108"
+   id="svg602"
+   sodipodi:docname="key_jordan_wiens_01.svg"
+   sodipodi:version="0.32"
+   width="200.29518"
+   inkscape:version="0.45+devel"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0"
+   inkscape:export-filename="/Users/johnolsen/Pictures/by author build/assorted authors/key_jordan_wiens_01.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <metadata
+     id="metadata3">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Key</dc:title>
+        <dc:description />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>tool</rdf:li>
+            <rdf:li>key</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://www.openclipart.org">
+            <dc:title>Jordan Wiens</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Jordan Wiens</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Jordan Wiens</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:date />
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://web.resource.org/cc/PublicDomain" />
+        <dc:language>en</dc:language>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://web.resource.org/cc/PublicDomain">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs607" />
+  <sodipodi:namedview
+     id="base"
+     showgrid="false" />
+  <g
+     id="g608"
+     transform="matrix(0.59261,0,0,0.59261,-1.4310235,-3.730999)">
+    <path
+       d="M 84,70 C 79.2893,67.5426 76.508,60.8487 70.9969,60.3989 C 65.7964,59.9745 62.4727,65.8945 58.0856,65.385 C 51.0382,64.5666 46.5085,57.9278 38.0147,60.5139 C 28.0141,63.5587 19.032,76.6925 10.9606,83.1304 C 7.81953,85.6359 2.97809,88.6056 2.45139,93 C 1.87411,97.8164 8.26954,104.627 11.375,107.852 C 17.103,113.8 31.3553,111 39,111 C 64.3908,111 89.6669,112.998 115,113 C 125.288,113.001 146.834,107.984 147,122 L 165,122.725 L 179,129 C 181.204,141.216 193.292,152.145 202.914,159.11 C 231.832,180.039 274.564,182.535 304,160.65 C 330.735,140.772 344,108.361 339.559,75.4244 C 338.317,66.2203 332.208,57.8931 331,49 C 322.409,40.7637 316.814,30.4964 306.91,23.3302 C 277.761,2.23753 236.134,-0.0122681 206,20.7739 C 197.593,26.5731 190.603,33.7737 184.583,42 C 180.556,47.5017 177.084,55.3158 169.985,57.4514 C 163.846,59.2986 159.198,52.5394 153.059,53.4915 C 148.586,54.1852 149.62,59.7554 145.852,61.3966 C 143.711,62.3293 130.793,66.713 129.17,66.267 C 125.957,65.384 124.798,61.2754 120.985,61.5463 C 115.957,61.9034 114.338,68.1609 109.845,69.2485 C 105.798,70.228 102.889,64.4712 99.9853,62.6034 C 93.3213,58.3159 86.9832,64.3419 84,70 z"
+       id="path604"
+       style="fill:#000000;stroke:none" />
+    <path
+       d="M 177,59 C 188.327,53.1236 194.588,39.5297 204.001,31.0787 C 221.342,15.5092 247.453,10.0022 270,14.311 C 279.994,16.2208 289.295,20.5215 297.961,25.7199 C 360.626,63.3126 333.199,162.037 263,168.83 C 241.022,170.957 219.463,164.651 203,149.829 C 193.693,141.45 186.098,124.372 173,122 C 182.521,128.926 187.208,139.52 195.174,147.957 C 204.027,157.334 215.168,163.157 227,167.702 C 239.887,172.653 253.437,173.494 267,171.95 C 279.033,170.58 291.003,165.365 300.996,158.666 C 310.37,152.382 317.167,144.395 323.274,135 C 341.589,106.821 340.929,69.3565 320.806,42.0934 C 295.978,8.45808 242.117,-1.95789 208.081,24.0116 C 196.056,33.1866 183.478,45.0893 177,59 M 292,71.4684 C 265.333,76.5853 273.179,117.383 300,112.671 C 326.85,107.955 318.249,66.4316 292,71.4684 z"
+       id="path605"
+       style="fill:#ffffff;stroke:none" />
+  </g>
+</svg>
