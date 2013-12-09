@@ -5,8 +5,11 @@
       content="text/html; charset=utf-8" />
     <title>Email Privacy w/ Enigmail</title>
     <style type="text/css">
-      body { font-family: sans-serif; font-size: 20px; }
-      .small { font-size: 0.6em; }
+      body          { font-family: sans-serif; font-size: 20px; }
+      img           { max-width: 100%; }
+      .medium       { font-size: 0.8em; }
+      .medium-small { font-size: 0.7em; }
+      .small        { font-size: 0.6em; }
     </style>
   </head>
   <body>
@@ -21,6 +24,524 @@ Felix C. Stegerman `<flx@obfusk.net>`
 .small[2013-12-09]
 
 ---
+
+...
+
+---
+
+class: center, middle
+
+![images/gmail_imap.png](images/gmail_imap.png)
+
+.small[Image # - Activate IMAP for Gmail]
+
+---
+
+class: center, middle
+
+![images/tb_welcome.png](images/tb_welcome.png)
+
+.small[image # - Welcome to Thunderbird]
+
+---
+
+class: center, middle
+
+![images/tb_setup_account.png](images/tb_setup_account.png)
+
+.small[image # - Thunderbird Account Setup - Step #1]
+
+---
+
+class: center, middle
+
+![images/tb_setup_gmail.png](images/tb_setup_gmail.png)
+
+.small[image # - Thunderbird Account Setup - Step #2]
+
+---
+
+class: center, middle
+
+![images/tb_main.png](images/tb_main.png)
+
+.small[image # - Thunderbird Main Window]
+
+---
+
+class: center, middle
+
+![images/tb_addons.png](images/tb_addons.png)
+
+.small[image # - Install Enigmail with Thunderbird Add-ons Manager]
+
+---
+
+class: center, middle
+
+![images/tb_restart_now.png](images/tb_restart_now.png)
+
+.small[image # - Restart Thunderbird after Enigmail Install]
+
+---
+
+class: center, middle
+
+![images/wizard_step_1.png](images/wizard_step_1.png)
+
+.small[image # - Enigmail Wizard - Step #1]
+
+---
+
+class: center, middle
+
+![images/wizard_step_2.png](images/wizard_step_2.png)
+
+.small[image # - Enigmail Wizard - Step #2]
+
+---
+
+class: center, middle
+
+![images/wizard_step_3.png](images/wizard_step_3.png)
+
+.small[image # - Enigmail Wizard - Step #3]
+
+---
+
+class: center, middle
+
+![images/wizard_step_4.png](images/wizard_step_4.png)
+
+.small[image # - Enigmail Wizard - Step #4]
+
+---
+
+class: center, middle
+
+![images/wizard_step_5.png](images/wizard_step_5.png)
+
+.small[image # - Enigmail Wizard - Step #5]
+
+---
+
+class: center, middle
+
+![images/wizard_step_6.png](images/wizard_step_6.png)
+
+.small[image # - Enigmail Wizard - Step #6]
+
+---
+
+class: center, middle
+
+![images/wizard_step_7.png](images/wizard_step_7.png)
+
+.small[image # - Enigmail Wizard - Step #6]
+
+---
+
+class: center, middle
+
+![images/wizard_step_8.png](images/wizard_step_8.png)
+
+.small[image # - Enigmail Wizard - Step #8]
+
+---
+
+class: center, middle
+
+![images/wizard_q_revoke.png](images/wizard_q_revoke.png)
+
+.small[image # - Enigmail Wizard - Generate Revocation Certificate?]
+
+---
+
+class: center, middle
+
+![images/enter_pass.png](images/enter_pass.png)
+
+.small[image # - Enter Passphrase]
+
+---
+
+class: center, middle
+
+![images/wizard_save_revoke.png](images/wizard_save_revoke.png)
+
+.small[image # - Enigmail Wizard - Save Revocation Certificate]
+
+---
+
+class: center, middle
+
+![images/wizard_revoke_saved.png](images/wizard_revoke_saved.png)
+
+.small[image # - Enigmail Wizard - Revocation Certificate Saved]
+
+---
+
+class: center, middle
+
+![images/wizard_done.png](images/wizard_done.png)
+
+.small[image # - Enigmail Wizard - Done]
+
+---
+
+class: center, middle
+
+![images/tb_write.png](images/tb_write.png)
+
+.small[image # - Thunderbird Write]
+
+---
+
+class: center, middle
+
+![images/tb_write_1.png](images/tb_write_1.png)
+
+.small[image # - Thunderbird Write - Signed]
+
+---
+
+class: center, middle
+
+![images/tb_write_2.png](images/tb_write_2.png)
+
+.small[image # - Thunderbird Write - Signed & Encrypted]
+
+---
+
+class: center, middle
+
+![images/tb_write_3.png](images/tb_write_3.png)
+
+.small[image # - Thunderbird Write - Unsigned & Unencrypted (Normal)]
+
+---
+
+class: center, middle
+
+![images/tb_mail_1.png](images/tb_mail_1.png)
+
+.small[image # - Thunderbird Read - Signed]
+
+---
+
+class: center, middle
+
+![images/tb_mail_2.png](images/tb_mail_2.png)
+
+.small[image # - Thunderbird Read - Signed & Encrypted]
+
+---
+
+class: center, middle
+
+![images/tb_mail_3.png](images/tb_mail_3.png)
+
+.small[image # - Thunderbird Read - Unsigned & Unencrypted (Normal)]
+
+---
+
+Signed Mail Source:
+
+<!-- {{{1 -->
+
+.medium[
+```
+Return-Path: <obfusktest@gmail.com>
+Received: ...
+Message-ID: <...@gmail.com>
+Date: Sun, 08 Dec 2013 22:51:25 +0100
+From: Test User <obfusktest@gmail.com>
+User-Agent: ... Thunderbird/24.1.1
+MIME-Version: 1.0
+To: obfusktest@gmail.com
+Subject: test #1 - sign
+X-Enigmail-Version: 1.6
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+a signed message
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+Comment: Using GnuPG with Thunderbird - http://www.enigmail.net/
+
+iQEcBAEBAgAGBQJSpOndAAoJEDwvV/C2euNIg8AH/0yOJIyu1721Q0+9FQF1p/Dq
+4Zs4/g8M16zTdVSb7AUvJFimhWEaFRKiVtEc2kr3EOIV96hO4hzTBRB4Y/APNyJr
+YtmCxE7mKJ+3ZDpwmB5KRabCOSDmTFQyGTyW/OZr51GN/Zd7lDdlSrK95QN9rxzY
+yo0oImQDLCeyciEZi9431TTdGQi6+9t+uzlo6xaxTCiB5TdbMKDg4mCkZu+obtwQ
+J8Q1reuSegAczcNiu21k96hYdcxcxpDa8veMCg8HdYo/+QmyRBKijLoDsyhojZX8
+65lBqvMEGveuqUTTIeU/0ZQvg8TcwjftEHF3wpAfOzfVwPpDpCoa4AGUwB5MvkE=
+=1Fp1
+-----END PGP SIGNATURE-----
+```
+]
+
+<!-- }}}1 -->
+
+---
+
+Signed & Encrypted Mail Source:
+
+<!-- {{{1 -->
+
+.medium-small[
+```
+Return-Path: <obfusktest@gmail.com>
+Received: ...
+Message-ID: <...@gmail.com>
+Date: Sun, 08 Dec 2013 22:52:02 +0100
+From: Test User <obfusktest@gmail.com>
+User-Agent: ... Thunderbird/24.1.1
+MIME-Version: 1.0
+To: obfusktest@gmail.com
+Subject: test #2 - sign + encrypt
+X-Enigmail-Version: 1.6
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+
+-----BEGIN PGP MESSAGE-----
+Charset: ISO-8859-1
+Version: GnuPG v1.4.11 (GNU/Linux)
+Comment: Using GnuPG with Thunderbird - http://www.enigmail.net/
+
+hQEMA7cQS3ayLdgbAQgAkcbyScDEdrb2f2CB/HNlEESFAzQ9vC0xBxo2Zg1P5YoO
+hlaUNbMj6zc3H+yM+XjlOJuxAKWAevICOTbWvBSjD7pI267D3BGcpPwSpCvppK3o
+z/aR6onAzOqesjK/IJ3y7yHWN4sFvwghjeENU/KOMxsOmnapJokvzpN8KBoxK4/C
+a/4vVJ/2z1EgFEj9pgtaQ3PHb7pY+Kz19BbXfFlS4I7BwQAic8X9SnS9cQTexiU7
+jzQUyTZTERuLoyVDd1QnM1GZdgkzugqTz9tlItr9P+7MRNH92fxdLYYXztt1eQYV
+eun1vyp18TbaWiGawNfDN3Qq/Z72zd48AWkyh5Edh9LAzAHSBUeTRYqHxxs/t2zt
+zgjNI8zztrxLLLxUDIuq2Zgcljja3yjo61GkdAFDzFX57uakV95xAUkrA7qwkwr3
+610caXyQDvoksy49tgutJHMcr3iyl4oYadFwIflvNt+N70gFxYplx1IO+Tiw32b8
+gpwoZVtEyUYr5Z71DGPrz9D6UzGUT6jvLtjnc53UTT5R7T7OZO1rtLzIpZ/Kzwsq
+CR0z57/kfkRme0wWWw2V4BzE+Fk4lNwoZbT71hsRKWwO3/Ljeb5GpwFF67LSiZme
+zXi4JKpf/NDHwNf60KmKZubKwcdIsK2X+I2CKNTVwb34xbV+kaLDc5bPrq8aKchV
+ToWiCatR6tVh8g3+OtVqkuGp52OZB3zoRorsAm64/P33HTNuELpTjq+0/HneBtaZ
+YMxeNDZ7Va9zXXRmrXNj5reudSFrCxRK9n5FM0OaFmWgTertxf6jwx40eZWIzaDc
+cgJiIKdFUDWxnRPMyjCQ6UDfml7rzWp1NgD75gRyZG4hSfhDKpBnBFrZvXTd5A==
+=oZHe
+-----END PGP MESSAGE-----
+```
+]
+
+<!-- }}}1 -->
+
+---
+
+Unsigned & Unencrypted (Normal) Mail Source:
+
+<!-- {{{1 -->
+
+.medium[
+```
+Return-Path: <obfusktest@gmail.com>
+Received: ...
+Message-ID: <...@gmail.com>
+Date: Sun, 08 Dec 2013 22:53:28 +0100
+From: Test User <obfusktest@gmail.com>
+User-Agent: ... Thunderbird/24.1.1
+MIME-Version: 1.0
+To: obfusktest@gmail.com
+Subject: test #3 - unsigned + unencrypted
+X-Enigmail-Version: 1.6
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+a normal message
+```
+]
+
+<!-- }}}1 -->
+
+---
+
+...
+
+---
+
+class: center, middle
+
+![images/enigmail_attachments.png](images/enigmail_attachments.png)
+
+.small[images/enigmail_attachments.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_gen_tab_1.png](images/enigmail_gen_tab_1.png)
+
+.small[images/enigmail_gen_tab_1.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_gen_tab_2.png](images/enigmail_gen_tab_2.png)
+
+.small[images/enigmail_gen_tab_2.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_key_actions.png](images/enigmail_key_actions.png)
+
+.small[images/enigmail_key_actions.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_key_management.png](images/enigmail_key_management.png)
+
+.small[images/enigmail_key_management.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_key_management_all.png](images/enigmail_key_management_all.png)
+
+.small[images/enigmail_key_management_all.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_key_management_sign.png](images/enigmail_key_management_sign.png)
+
+.small[images/enigmail_key_management_sign.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_key_management_w_obfusk.png](images/enigmail_key_management_w_obfusk.png)
+
+.small[images/enigmail_key_management_w_obfusk.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_key_props.png](images/enigmail_key_props.png)
+
+.small[images/enigmail_key_props.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_prefs_alwaystrust.png](images/enigmail_prefs_alwaystrust.png)
+
+.small[images/enigmail_prefs_alwaystrust.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_prefs_expert.png](images/enigmail_prefs_expert.png)
+
+.small[images/enigmail_prefs_expert.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_recv_key_step_1.png](images/enigmail_recv_key_step_1.png)
+
+.small[images/enigmail_recv_key_step_1.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_recv_key_step_2.png](images/enigmail_recv_key_step_2.png)
+
+.small[images/enigmail_recv_key_step_2.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_recv_key_step_3.png](images/enigmail_recv_key_step_3.png)
+
+.small[images/enigmail_recv_key_step_3.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_sign_key_local.png](images/enigmail_sign_key_local.png)
+
+.small[images/enigmail_sign_key_local.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_sign_sender_key.png](images/enigmail_sign_sender_key.png)
+
+.small[images/enigmail_sign_sender_key.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_sigs.png](images/enigmail_sigs.png)
+
+.small[images/enigmail_sigs.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_unknown_recipient.png](images/enigmail_unknown_recipient.png)
+
+.small[images/enigmail_unknown_recipient.png]
+
+---
+
+class: center, middle
+
+![images/enigmail_use_existing_key.png](images/enigmail_use_existing_key.png)
+
+.small[images/enigmail_use_existing_key.png]
+
+---
+
+class: center, middle
+
+![images/tb_mail_4_signed_key.png](images/tb_mail_4_signed_key.png)
+
+.small[images/tb_mail_4_signed_key.png]
+
+---
+
+class: center, middle
+
+![images/tb_mail_4_unknown.png](images/tb_mail_4_unknown.png)
+
+.small[images/tb_mail_4_unknown.png]
+
+---
+
+class: center, middle
+
+![images/tb_mail_4_untrusted.png](images/tb_mail_4_untrusted.png)
+
+.small[images/tb_mail_4_untrusted.png]
+
+---
+
+...
 
 ...
 
