@@ -35,7 +35,8 @@ layout: false
 # Table of Contents
 
 * [What's Enigmail/Thunderbird/OpenPGP/GnuPG?](#what)
-* [What is public key cryptography?](#crypto)
+* [Why should I care about encryption? and What is public key
+cryptography?](#crypto)
 * [Prerequisites](#prereq)
 * [Gmail Settings](#gmail)
 * [Setup Thunderbird w/ Gmail](#tb-setup)
@@ -47,8 +48,13 @@ layout: false
 * [Attachments](#attach)
 * [Signatures](#sigs)
 * [Key Management](#key-mgmt)
+* [Export Key](#export-key)
+* [Import Key](#import-key)
+* [Receive Key](#recv-key)
+* [Refresh Key](#refresh-key)
 * [Sign Key](#sign-key)
 * [Miscellaneous](#misc)
+* [Rules](#rules)
 * [Generate Key Manually](#gen-key)
 * [Links](#links)
 
@@ -84,6 +90,10 @@ layout: true
 
 name: crypto
 
+# Why should I care about encryption?
+
+--> [Encryption - Why?](../encryption/index.html#why)
+
 # What is public key cryptography?
 
 --> [Encryption - Public key
@@ -103,7 +113,7 @@ layout: false
 ## Linux
 
 You'll need thunderbird and gnupg -- see the [links](#links).  Most
-distributions' repositories provide both; e.g. Debian/Ubuntu:
+distributions' repositories provide both; Ubuntu:
 
 .medium[
 ```
@@ -528,6 +538,56 @@ name: key-mgmt
 
 ---
 
+![images/enigmail_key_management_menu.png](images/enigmail_key_management_menu.png)
+
+.small[image # - Enigmail Key Management - Key Menu]
+
+---
+
+name: export-key
+
+# Export Key
+
+---
+
+![images/enigmail_key_management_export.png](images/enigmail_key_management_export.png)
+
+.small[image # - Enigmail Key Management - Export]
+
+---
+
+![images/enigmail_key_management_export_save.png](images/enigmail_key_management_export_save.png)
+
+.small[image # - Enigmail Key Management - Export - Save]
+
+---
+
+![images/tb_write_send_key.png](images/tb_write_send_key.png)
+
+.small[image # - Enigmail Key Management - Export & Send]
+
+---
+
+name: import-key
+
+# Import Key
+
+---
+
+![images/enigmail_key_management_import_step_1.png](images/enigmail_key_management_import_step_1.png)
+
+.small[image # - Enigmail Key Management - Import - Step #1]
+
+---
+
+![images/enigmail_key_management_import_step_2.png](images/enigmail_key_management_import_step_2.png)
+
+.small[image # - Enigmail Key Management - Import - Step #2]
+
+---
+
+name: recv-key
+
 # Receive Key
 
 ---
@@ -556,6 +616,18 @@ name: key-mgmt
 
 ---
 
+name: refresh-key
+
+# Refresh Key
+
+---
+
+![images/enigmail_key_management_refreshed.png](images/enigmail_key_management_refreshed.png)
+
+.small[image # - Enigmail Key Management - Refresh Key]
+
+---
+
 name: sign-key
 
 # Sign Key
@@ -577,6 +649,8 @@ name: sign-key
 ![images/enigmail_sign_key_local.png](images/enigmail_sign_key_local.png)
 
 .small[image #42 - Enigmail Key Management - Sign Key (Locally)]
+
+Make sure to check the fingerprint!
 
 ---
 
@@ -610,6 +684,30 @@ name: misc
 
 This allows you to encrypt messages to untrusted keys (i.e. keys that
 are not in your web of trust).
+
+---
+
+name: rules
+
+# Rules
+
+---
+
+![images/enigmail_prefs_key_sel.png](images/enigmail_prefs_key_sel.png)
+
+.small[image # - Enigmail Preferences - Key Selection]
+
+---
+
+![images/enigmail_prefs_rules.png](images/enigmail_prefs_rules.png)
+
+.small[image # - Enigmail Preferences - Rules]
+
+---
+
+![images/enigmail_prefs_add_rule.png](images/enigmail_prefs_add_rule.png)
+
+.small[image # - Enigmail Preferences - Add Rule]
 
 ---
 

@@ -24,6 +24,13 @@
 
 []: }}}1
 
+## TODO
+
+  * number images
+  * encryption presentation
+  * privacy presentation
+  * ...
+
 ## License
 
   GPLv2 [1].
