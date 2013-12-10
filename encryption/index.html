@@ -41,19 +41,15 @@ layout: false
 * [What is encryption?](#what)
 * [What are digital signatures?](#what-sig)
 * [Kinds of encryption](#kinds)
-* ...
+* [Symmetric key cryptography](#symm)
 * [Public key cryptography](#pubkey)
+* [Using encryption](#using)
 * ...
-
----
-
-template: default
-layout: true
+* [Links](#links)
 
 ---
 
 name: why
-layout: false
 
 # Why use (email) encryption?
 
@@ -213,7 +209,53 @@ symmetric-key (also called private-key) schemes.
 
 ---
 
-...
+name: symm
+
+# Symmetric key cryptography
+
+> Symmetric-key cryptography uses the same keys for both encryption of
+plaintext and decryption of ciphertext.  The keys, in practice,
+represent a shared secret between two or more parties that can be used
+to maintain a private information link.  This requirement that both
+parties have access to the secret key is one of the main drawbacks of
+symmetric key encryption, in comparison to public-key encryption.
+This is also known as private key encryption.
+
+---
+
+## Sending a message using symmetric-key encryption
+
+When Alice wants to send a message to Bob, she encrypts the message
+(plaintext) with the shared key and can now send the ciphertext to Bob
+via an insecure channel (like the internet).
+
+When Bob receives the ciphertext from Alice, he decrypts it using the
+shared key.
+
+Alice and Bob will need to exchange the shared key beforehand, using a
+secure channel (e.g. they meet in person to generate the key).
+
+---
+
+template: default
+layout: true
+
+---
+
+![images/symm-crypto.png](images/symm-crypto.png)
+
+.small[Symmetric key cryptography]
+
+---
+
+layout: false
+
+## Using a USB flash drive encrypted using symmetric-key cryptography
+
+John has created an encrypted USB flash drive.  When he connects it to
+his computer, he is prompted for his key (passphrase).  When he enters
+the correct key, he can use the flash drive as any other.  Anyone
+without his key will only see garbage.
 
 ---
 
@@ -221,13 +263,83 @@ name: pubkey
 
 # Public key cryptography
 
-...
+> Public-key cryptography, also known as asymmetric cryptography,
+requires two separate keys, one of which is secret (or private) and
+one of which is public.  Although different, the two parts of this key
+pair are mathematically linked.  The public key is used to encrypt
+plaintext or to verify a digital signature; whereas the private key is
+used to decrypt ciphertext or to create a digital signature.  The term
+"asymmetric" stems from the use of different keys to perform these
+opposite functions, each the inverse of the other -- as contrasted
+with conventional ("symmetric") cryptography which relies on the same
+key to perform both.
+
+> An analogy to public-key encryption is that of a locked mail box
+with a mail slot.  The mail slot is exposed and accessible to the
+public -- its location (the street address) is, in essence, the public
+key.  Anyone knowing the street address can go to the door and drop a
+written message through the slot.  However, only the person who
+possesses the key can open the mailbox and read the message.
+
+> An analogy for digital signatures is the sealing of an envelope with
+a personal wax seal.  The message can be opened by anyone, but the
+presence of the unique seal authenticates the sender.
 
 ---
 
-![images/keypair.png](images/keypair.png)
+## Sending a message using public-key encryption
 
-.small[Public/Private Keypair]
+When Alice wants to send a message to Bob, she encrypts the message
+(plaintext) with his public key and can now send the ciphertext to Bob
+via an insecure channel (like the internet).
+
+When Bob receives the ciphertext from Alice, he decrypts it using his
+private key.
+
+If Alice also signes the message using her private key, Bob can use
+her public key to verify that the message was sent by Alice and has
+not been modified in transit.
+
+Alice and Bob will need to exchange public keys beforehand, e.g. by
+email or using a public key server.  They will need to meet in person
+-- or at least communicate in a manner which guarantees both of them
+they are not communicating with an imposter -- to verify each has the
+correct public key (and not an imposter's) by checking the
+fingerprint.
+
+---
+
+template: default
+layout: true
+
+---
+
+![images/pubkey-crypto.png](images/pubkey-crypto.png)
+
+.small[Public key cryptography]
+
+---
+
+name: using
+layout: false
+
+# Using encryption
+
+## Hard disks and USB flash drives
+
+### Linux
+
+Most distributions allow you to set up hard disk encryption when
+installing.  You can use cryptsetup or the gnome disk utility to
+create encrypted USB flash drives.
+
+## Email
+
+GnuPG is a free software public-key (and symmetric) encryption
+program.  The Enigmail plugin for the Thunderbird email program uses
+GnuPG to allow you to send and receive encrypted email.
+
+--> [Email Privacy w/ Enigmail](../enigmail/index.html)
 
 ---
 
@@ -242,6 +354,17 @@ layout: false
 
 * https://github.com/obfusk/keep-it-private
 * http://obfusk.github.io/keep-it-private
+
+<!-- -->
+
+* http://en.wikipedia.org/wiki/Encryption
+* http://en.wikipedia.org/wiki/Digital_signature
+* http://en.wikipedia.org/wiki/Public-key_cryptography
+
+<!-- -->
+
+* http://www.gnupg.org
+* https://www.enigmail.net
 
 <!-- -->
 

@@ -33,19 +33,20 @@
 
 ## License
 
-  The key and padlock{,_open} images are public domain curtesy of
-  Openclipart.
+  The key, pencil, and padlock{,_open} images are public domain
+  curtesy of Openclipart.
 
-  The encryption quotes are adapted from the Wikipedia article on
-  encryption [1].
+  The encryption quotes are adapted from Wikipedia [1].
 
   Everything else: GPLv2 [2] or CC-BY-SA-3.0 [3].
 
 ## References
 []: {{{1
 
-  [1] Wikipedia - Encryption
+  [1] Wikipedia Articles
   --- http://en.wikipedia.org/wiki/Encryption
+  --- http://en.wikipedia.org/wiki/Digital_signature
+  --- http://en.wikipedia.org/wiki/Public-key_cryptography
 
   [2] GNU General Public License, version 2
   --- http://www.opensource.org/licenses/GPL-2.0
