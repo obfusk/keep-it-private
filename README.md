@@ -15,7 +15,7 @@
 
   * [encryption](encryption/index.html)
   * [enigmail](enigmail/index.html)
-  * [internet privacy](privacy/index.html)
+  * [privacy](privacy/index.html)
   * ...
 
 #
