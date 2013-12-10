@@ -158,15 +158,19 @@ name: what
 
 # What is encryption?
 
-> Encryption is the process of encoding messages (or information) in
+> Encryption is the process of **encoding messages (or information) in
 such a way that third parties cannot read it, and only authorized
-parties can.  In an encryption scheme, the message or information
-(referred to as plaintext) is encrypted using an encryption algorithm,
-turning it into an unreadable ciphertext.  This is usually done with
-the use of an encryption key, which specifies how the message is to be
-encoded.  Any adversary that can see the ciphertext should not be able
-to determine anything about the original message.  An authorized
-party, however, is able to decode the ciphertext using a decryption
+parties can**.
+
+> In an encryption scheme, the message or information (referred to as
+**plaintext**) is encrypted using an encryption algorithm, turning it
+into an unreadable **ciphertext**.  This is usually done with the use
+of an **encryption key**, which specifies how the message is to be
+encoded.
+
+> Any adversary that can see the ciphertext should not be able to
+determine anything about the original message.  An authorized party,
+however, is able to decode the ciphertext using a decryption
 algorithm, that usually requires a secret decryption key, that
 adversaries do not have access to.
 
@@ -176,15 +180,15 @@ name: what-sig
 
 # What are digital signatures?
 
-> A digital signature is a mathematical scheme for demonstrating the
-authenticity of a digital message or document.  A valid digital
+> A digital signature is a mathematical scheme for **demonstrating the
+authenticity of a digital message or document**.  A valid digital
 signature gives a recipient reason to believe that the message was
-created by a known sender, such that the sender cannot deny having
-sent the message (authentication and non-repudiation) and that the
-message was not altered in transit (integrity).  Digital signatures
-are commonly used for software distribution, financial transactions,
-and in other cases where it is important to detect forgery or
-tampering.
+**created by a known sender**, such that the sender **cannot deny
+having sent the message** (**authentication** and **non-repudiation**)
+and that **the message was not altered in transit** (**integrity**).
+Digital signatures are commonly used for software distribution,
+financial transactions, and in other cases where it is important to
+detect forgery or tampering.
 
 ---
 
@@ -200,11 +204,11 @@ they wish to communicate.
 
 ## Public key encryption
 
-> In public-key encryption schemes, the encryption key is published
-for anyone to use and encrypt messages.  However, only the receiving
-party has access to the decryption key and is capable of reading the
-encrypted messages.  Public-key encryption is a relatively recent
-invention: historically, all encryption schemes have been
+> In public-key encryption schemes, the encryption key is **published
+for anyone to use and encrypt messages**.  However, **only the
+receiving party has access to the decryption key** and is capable of
+reading the encrypted messages.  Public-key encryption is a relatively
+recent invention: historically, all encryption schemes have been
 symmetric-key (also called private-key) schemes.
 
 ---
@@ -215,11 +219,11 @@ name: symm
 
 > Symmetric-key cryptography uses the same keys for both encryption of
 plaintext and decryption of ciphertext.  The keys, in practice,
-represent a shared secret between two or more parties that can be used
-to maintain a private information link.  This requirement that both
-parties have access to the secret key is one of the main drawbacks of
-symmetric key encryption, in comparison to public-key encryption.
-This is also known as private key encryption.
+represent a **shared secret between two or more parties that can be
+used to maintain a private information link**.  This requirement that
+both parties have access to the secret key is one of the main
+drawbacks of symmetric key encryption, in comparison to public-key
+encryption.  This is also known as private key encryption.
 
 ---
 
@@ -264,26 +268,26 @@ name: pubkey
 # Public key cryptography
 
 > Public-key cryptography, also known as asymmetric cryptography,
-requires two separate keys, one of which is secret (or private) and
-one of which is public.  Although different, the two parts of this key
-pair are mathematically linked.  The public key is used to encrypt
-plaintext or to verify a digital signature; whereas the private key is
-used to decrypt ciphertext or to create a digital signature.  The term
-"asymmetric" stems from the use of different keys to perform these
-opposite functions, each the inverse of the other -- as contrasted
-with conventional ("symmetric") cryptography which relies on the same
-key to perform both.
+requires **two separate keys, one of which is secret (or private) and
+one of which is public**.  Although different, the two parts of this
+key pair are mathematically linked.  The public key is used to
+**encrypt plaintext or to verify a digital signature**; whereas the
+private key is used to **decrypt ciphertext or to create a digital
+signature**.  The term "asymmetric" stems from the use of different
+keys to perform these opposite functions, each the inverse of the
+other -- as contrasted with conventional ("symmetric") cryptography
+which relies on the same key to perform both.
 
-> An analogy to public-key encryption is that of a locked mail box
-with a mail slot.  The mail slot is exposed and accessible to the
+> An analogy to public-key encryption is that of a **locked mail box
+with a mail slot**.  The mail slot is exposed and accessible to the
 public -- its location (the street address) is, in essence, the public
 key.  Anyone knowing the street address can go to the door and drop a
 written message through the slot.  However, only the person who
 possesses the key can open the mailbox and read the message.
 
-> An analogy for digital signatures is the sealing of an envelope with
-a personal wax seal.  The message can be opened by anyone, but the
-presence of the unique seal authenticates the sender.
+> An analogy for digital signatures is the** sealing of an envelope
+with a personal wax seal**.  The message can be opened by anyone, but
+the presence of the unique seal authenticates the sender.
 
 ---
 
