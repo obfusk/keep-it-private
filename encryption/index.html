@@ -39,6 +39,8 @@ layout: false
 * [What can't encryption do?](#what-not)
 * [There's more to privacy than encryption](#privacy)
 * [What is encryption?](#what)
+* [What are digital signatures?](#what-sig)
+* [Kinds of encryption](#kinds)
 * ...
 * [Public key cryptography](#pubkey)
 * ...
@@ -98,11 +100,25 @@ name: how
 # How can encryption protect my secrets?
 
 Encryption allows you to securely store and/or transmit messages and
-data.  You can use it to:
+data; and to verify that a message was not modified in transit and was
+created by a known sender.
 
-  * send emails that only the intended recipient(s) can read
-  * protect the files on your laptop from being read by anyone but you
-  * etc.
+  * encrypted files on a laptop or USB flash drive can only
+    be read by someone who knows the passphrase (data "at rest")
+
+  * encrypted emails can only be read by the intended
+    recipient(s) (data in transit)
+
+  * digital signatures protect the integrity and authenticity of a
+    message (or file)
+
+  * encrypted connections to servers (e.g. https for websites) prevent
+    eavesdropping and give a reasonable guarantee that one is
+    communicating with precisely the web site that one intended to
+    communicate with (as opposed to an imposter)
+
+  * encrypted text/audio/video chat connections keep conversations
+    private
 
 ---
 
@@ -122,6 +138,10 @@ the information public; e.g. by
   * (accidentally) replying to your email without encrypting it
   * forwarding it to someone else
 
+And an encrypted connection does not prevent e.g. your email provider
+from reading your messages -- only encryption of the messages
+themselves can do that.
+
 ---
 
 name: privacy
@@ -131,6 +151,8 @@ name: privacy
 Encryption is only part of privacy protection.  Sending encrypted
 email does not protect you against people/corporations/governments
 tracking what you do, where you are, who you communicate with, etc.
+
+Encryption does not prevent tracking and does not provide anonymity.
 
 --> [Privacy - Why?](../privacy/index.html#why)
 
@@ -151,6 +173,43 @@ to determine anything about the original message.  An authorized
 party, however, is able to decode the ciphertext using a decryption
 algorithm, that usually requires a secret decryption key, that
 adversaries do not have access to.
+
+---
+
+name: what-sig
+
+# What are digital signatures?
+
+> A digital signature is a mathematical scheme for demonstrating the
+authenticity of a digital message or document.  A valid digital
+signature gives a recipient reason to believe that the message was
+created by a known sender, such that the sender cannot deny having
+sent the message (authentication and non-repudiation) and that the
+message was not altered in transit (integrity).  Digital signatures
+are commonly used for software distribution, financial transactions,
+and in other cases where it is important to detect forgery or
+tampering.
+
+---
+
+name: kinds
+
+# Kinds of encryption
+
+## Symmetric key encryption
+
+> In Symmetric-key schemes, the encryption and decryption keys are the
+same.  Thus communicating parties must agree on a secret key before
+they wish to communicate.
+
+## Public key encryption
+
+> In public-key encryption schemes, the encryption key is published
+for anyone to use and encrypt messages.  However, only the receiving
+party has access to the decryption key and is capable of reading the
+encrypted messages.  Public-key encryption is a relatively recent
+invention: historically, all encryption schemes have been
+symmetric-key (also called private-key) schemes.
 
 ---
 

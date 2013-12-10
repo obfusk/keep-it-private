@@ -36,7 +36,7 @@
   The key and padlock{,_open} images are public domain curtesy of
   Openclipart.
 
-  The "What is encryption?" quote comes from the Wikipedia article on
+  The encryption quotes are adapted from the Wikipedia article on
   encryption [1].
 
   Everything else: GPLv2 [2] or CC-BY-SA-3.0 [3].
