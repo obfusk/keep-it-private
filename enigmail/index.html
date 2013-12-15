@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="content-type"
       content="text/html; charset=utf-8" />
-    <title>Email Privacy w/ Enigmail</title>
+    <title>Email Privacy - Cryptoparty</title>
     <style type="text/css">
       body          { font-family: sans-serif; font-size: 19px; }
       img           { max-width: 100%; }
@@ -21,70 +21,61 @@ class: middle, center
 layout: true
 
 ---
+# Email Privacy - Cryptoparty
 
-# Email Privacy w/ Enigmail
+## Party Like It’s 1984 !
 
-Felix C. Stegerman `<flx@obfusk.net>`
+* Felix C. Stegerman `<flx@obfusk.net>`
+* Donné Brok `<tonijn@dds.nl>`
+* Maurice Verheesen `<mho@fsfe.org>`
 
-.small[2013-12-09]
+> “CryptoParty is a decentralized, 
+> global initiative to introduce basic
+> cryptography tools to the general public.”
+
+.small[2013-12-10]
 
 ---
+name: welc
+# Welcome and introduction
 
+* What are we going to learn this evening
+* Who we are 
+* why we are doing this
+
+---
 layout: false
 
 # Table of Contents
 
-* [What's Enigmail/Thunderbird/OpenPGP/GnuPG?](#what)
+* [Welcome and introduction](#welc)
 * [Why should I care about encryption? and What is public key
 cryptography?](#crypto)
-* [Prerequisites](#prereq)
-* [Gmail Settings](#gmail)
-* [Setup Thunderbird w/ Gmail](#tb-setup)
-* [Install Enigmail](#enigmail-install)
-* [Configure Enigmail](#enigmail-config)
-* [Write Mail](#write-mail)
-* [Read Mail](#read-mail)
-* [Mail Source](#mail-source)
-* [Attachments](#attach)
-* [Signatures](#sigs)
-* [Key Management](#key-mgmt)
-* [Export Key](#export-key)
-* [Import Key](#import-key)
-* [Receive Key](#recv-key)
-* [Refresh Key](#refresh-key)
-* [Sign Key](#sign-key)
-* [Miscellaneous](#misc)
-* [Rules](#rules)
-* [Generate Key Manually](#gen-key)
+* [How does email work?](#work)
+* * [Types of email](#types)
+* * [Connection types](#connect)
+* [Crypto setup](setup)
+* * [Prerequisites](#prereq)
+* * [What's Enigmail/Thunderbird/OpenPGP/GnuPG?](#what)
+* * [Gmail Settings](#gmail)
+* * [Setup Thunderbird w/ Gmail](#tb-setup)
+* * [Install Enigmail](#enigmail-install)
+* * [Configure Enigmail](#enigmail-config)
+* * [Write Mail](#write-mail)
+* * [Read Mail](#read-mail)
+* * [Mail Source](#mail-source)
+* * [Attachments](#attach)
+* * [Signatures](#sigs)
+* * [Key Management](#key-mgmt)
+* * [Export Key](#export-key)
+* * [Import Key](#import-key)
+* * [Receive Key](#recv-key)
+* * [Refresh Key](#refresh-key)
+* * [Sign Key](#sign-key)
+* * [Miscellaneous](#misc)
+* * [Rules](#rules)
+* * [Generate Key Manually](#gen-key)
 * [Links](#links)
-
----
-
-name: what
-
-# What's Enigmail?
-
-> Enigmail is a security extension to Mozilla Thunderbird (and
-Seamonkey) that enables you to write and receive email messages signed
-and/or encrypted with the OpenPGP standard (using GnuPG).
-
-# What's Thunderbird?
-
-> Mozilla Thunderbird is a free software cross-platform email, news,
-and chat client developed by the Mozilla Foundation.
-
-# What are OpenPGP and GnuPG?
-
-> OpenPGP is a standard protocol for encrypting email using public key
-cryptography.  It is based on PGP as originally developed by Phil
-Zimmermann.
-
-> GnuPG is a free software implementation of the OpenPGP standard.
-
----
-
-template: default
-layout: true
 
 ---
 
@@ -98,6 +89,99 @@ name: crypto
 
 --> [Encryption - Public key
 cryptography](../encryption/index.html#pubkey)
+
+---
+name: work
+layout: false
+
+# How does email work?
+## * Types of email
+## * Connection types
+## * Anatomy of an email message
+## * Putting it all together: email transmission and reception
+
+---
+name: types 
+layout: false
+
+# Types of email
+
+> It's about location of the mail and access
+
+* Webmail (think Gmail, gmx, Hotmail etc)
+
+> Your mail provider has a mail server and on that mail server you
+> access your mail through a webinterface
+
+* Client - server based
+* * IMAP
+* * POP3
+
+> Here your mail is stored on a server, but you access your mail
+> through a local client (e.g. Outlook, Thunderbird, etc)
+
+> We will only focus on the latter type, since there are some
+> technical challenges with encryption for the first type.
+
+---
+name: connect
+layout: false
+
+# Connection types
+
+* Encrypted (SSL, HTTPS)
+* Unencrypted (HTTP)
+> Demo ??? Show through wireshark what unencrypted looks like?
+
+---
+name: anatomy
+
+# Anatomy of an email message
+
+<!-- {{{1 -->
+
+.medium[
+```
+Return-Path: <obfusktest@gmail.com>
+Received: ...
+Message-ID: <...@gmail.com>
+Date: Sun, 08 Dec 2013 22:53:28 +0100
+From: Test User <obfusktest@gmail.com>
+User-Agent: ... Thunderbird/24.1.1
+MIME-Version: 1.0
+To: obfusktest@gmail.com
+Subject: test #3 - unsigned + unencrypted
+X-Enigmail-Version: 1.6
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+a normal message
+```
+]
+
+<!-- }}}1 -->
+
+---
+name: together
+# Putting it all together: 
+## email transmission and reception
+
+https://scs.senecac.on.ca/~john.selmys/subjects/ops335-101/howemailworks.png
+
+---
+name: setup
+
+# Crypto setup
+
+> In this part we will show how to setup your email client to work
+> with you email provider and use them to sent & receive encrypted
+> mails.
+
+> First we will show how to setup your email provider. Than we will
+> configure the email client. And finally we will setup up the client
+> with a plugin that will take care of the encryption. At that point
+> we are ready to create encryption keys that we can use with the
+> plugin.
 
 ---
 
@@ -142,7 +226,28 @@ template: default
 layout: true
 
 ---
+name: what
 
+# What's Enigmail?
+
+> Enigmail is a security extension to Mozilla Thunderbird (and
+Seamonkey) that enables you to write and receive email messages signed
+and/or encrypted with the OpenPGP standard (using GnuPG).
+
+# What's Thunderbird?
+
+> Mozilla Thunderbird is a free software cross-platform email, news,
+and chat client developed by the Mozilla Foundation.
+
+# What are OpenPGP and GnuPG?
+
+> OpenPGP is a standard protocol for encrypting email using public key
+cryptography.  It is based on PGP as originally developed by Phil
+Zimmermann.
+
+> GnuPG is a free software implementation of the OpenPGP standard.
+
+---
 name: gmail
 
 # Gmail Settings
