@@ -2,7 +2,7 @@
 
     File        : README.md
     Maintainer  : Felix C. Stegerman <flx@obfusk.net>
-    Date        : 2013-12-09
+    Date        : 2013-12-15
 
     Copyright   : Copyright (C) 2013  Felix C. Stegerman
 
@@ -39,7 +39,8 @@
     (Openclipart).
   * Encryption quotes adapted from Wikipedia [1].
   * Privacy quotes adapted from The CryptoParty Handbook [2].
-  * Everything else: GPLv2 [3] or CC-BY-SA-3.0 [4].
+  * Remark [3]: MIT.
+  * Everything else: CC-BY-SA-3.0 [4].
 
 ## References
 []: {{{1
@@ -52,8 +53,8 @@
   [2] The CryptoParty Handbook
   --- https://www.cryptoparty.in/documentation/handbook
 
-  [3] GNU General Public License, version 2
-  --- http://www.opensource.org/licenses/GPL-2.0
+  [3] Remark
+  --- https://github.com/gnab/remark
 
   [4] Creative Commons Attribution-ShareAlike 3.0 Unported
   --- http://creativecommons.org/licenses/by-sa/3.0
