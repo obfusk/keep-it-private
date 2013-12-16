@@ -11,6 +11,7 @@
       .medium-small { font-size: 0.7em; }
       .small        { font-size: 0.6em; }
       .remark-slide { table-layout: fixed; }
+      .nobullets ul { list-style-type: none; }
     </style>
   </head>
   <body>
@@ -24,43 +25,275 @@ layout: true
 
 # Email Privacy w/ Enigmail
 
-Felix C. Stegerman `<flx@obfusk.net>`
+## CryptoParty like it's 1984!
 
-.small[2013-12-09]
+<br/>
+
+.nobullets[
+
+* Felix C. Stegerman `<flx@fsfe.org>`
+* Maurice Verheesen `<mho@fsfe.org>`
+* Donné Brok `<tonijn@dds.nl>`
+
+]
+
+<br/>
+
+> "CryptoParty is a decentralized, global initiative to introduce
+basic cryptography tools to the general public."
+
+<br/>
+
+.small[2013-12-16]
 
 ---
 
+name: welcome
 layout: false
+
+# Welcome
+
+## You'll learn:
+
+* How email works
+* Why encryption is important
+* How to use Enigmail and Thunderbird to send and receive encrypted
+  email:
+  - Configure e.g. Gmail
+  - Install Enigmail
+  - Setup Enigmail
+  - Send and receive encrypted email
+
+## About us:
+
+### Who are we?
+
+TODO
+
+### Why are we here?
+
+TODO
+
+---
+
+name: toc
 
 # Table of Contents
 
-* [What's Enigmail/Thunderbird/OpenPGP/GnuPG?](#what)
+.medium[
+
+* [Welcome](#welcome)
+* How email works:
+  - [Types of email](#email-types)
+  - [Email connections](#email-conns)
+  - [Anatomy of a message](#email-anatomy)
+  - [A message's journey](#email-journey)
 * [Why should I care about encryption? and What is public key
 cryptography?](#crypto)
-* [Prerequisites](#prereq)
-* [Gmail Settings](#gmail)
-* [Setup Thunderbird w/ Gmail](#tb-setup)
-* [Install Enigmail](#enigmail-install)
-* [Configure Enigmail](#enigmail-config)
-* [Write Mail](#write-mail)
-* [Read Mail](#read-mail)
-* [Mail Source](#mail-source)
-* [Attachments](#attach)
-* [Signatures](#sigs)
-* [Key Management](#key-mgmt)
-* [Export Key](#export-key)
-* [Import Key](#import-key)
-* [Receive Key](#recv-key)
-* [Refresh Key](#refresh-key)
-* [Sign Key](#sign-key)
-* [Miscellaneous](#misc)
-* [Rules](#rules)
-* [Generate Key Manually](#gen-key)
+* Using encryption:
+  - [What's Enigmail/Thunderbird/OpenPGP/GnuPG?](#what)
+  - [Prerequisites](#prereq)
+  - [Gmail Settings](#gmail)
+  - [Setup Thunderbird w/ Gmail](#tb-setup)
+  - [Install Enigmail](#enigmail-install)
+  - [Configure Enigmail](#enigmail-config)
+  - [Write Mail](#write-mail)
+  - [Read Mail](#read-mail)
+  - [Mail Source](#mail-source)
+  - [Attachments](#attach)
+  - [Signatures](#sigs)
+  - [Key Management](#key-mgmt)
+  - [Export Key](#export-key)
+  - [Import Key](#import-key)
+  - [Receive Key](#recv-key)
+  - [Refresh Key](#refresh-key)
+  - [Sign Key](#sign-key)
+  - Advanced:
+    * [Miscellaneous](#misc)
+    * [Rules](#rules)
+    * [Generate Key Manually](#gen-key)
 * [Links](#links)
+
+]
+
+---
+
+name: email-types
+
+# Types of email
+
+## How is it accessed?
+
+* Webmail (e.g. Gmail): read/write mail in browser
+* IMAP: read/write mail with a mail client
+* POP3: download and read/write mail with a mail client
+* SMTP: send mail
+
+## Where is it stored?
+
+* Webmail: on the mail server of your mail provider
+* IMAP: also on mail server, with local cache
+* POP3: local (after download from mail server)
+
+Encrypting webmail is still rather difficult, so we will show you how
+to send and receive encrypted email using the Thunderbird mail client.
+
+---
+
+name: email-conns
+
+# Email connections
+
+* Encrypted (POP3/IMAP/SMTP w/ SSL/TLS, HTTPS)
+* Unencrypted (POP3/IMAP/SMTP, HTTP)
+
+---
+
+name: pop3
+
+# POP3 anatomy
+
+<!-- {{{1 -->
+
+.medium[
+```
+S: +OK POP3 server ready
+C: USER alice
+S: +OK User accepted
+C: PASS secret
+S: +OK Pass accepted
+C: STAT
+S: +OK 2 320
+C: LIST
+S: +OK 2 messages (320 octets)
+S: 1 120
+S: 2 200
+S: .
+C: RETR 1
+S: +OK 120 octets
+{The server sends message 1}
+S: .
+C: DELE 1
+S: +OK message 1 deleted
+C: RETR 2
+S: +OK 200 octets
+{The server sends message 2}
+S: .
+C: DELE 2
+S: +OK message 2 deleted
+C: QUIT
+S: +OK POP3 server signing off (maildrop empty)
+{The server closes the connection}
+```
+]
+
+<!-- }}}1 -->
+
+---
+
+name: smtp
+
+# SMTP anatomy
+
+<!-- {{{1 -->
+
+.medium[
+```
+S: 220 smtp.example.com ESMTP Postfix
+C: HELO relay.example.org
+S: 250 Hello relay.example.org, I am glad to meet you
+C: MAIL FROM:<bob@example.org>
+S: 250 Ok
+C: RCPT TO:<alice@example.com>
+S: 250 Ok
+C: RCPT TO:<theboss@example.com>
+S: 250 Ok
+C: DATA
+S: 354 End data with <CR><LF>.<CR><LF>
+C: From: "Bob Example" <bob@example.org>
+C: To: "Alice Example" <alice@example.com>
+C: Cc: theboss@example.com
+C: Date: Tue, 15 January 2008 16:02:43 -0500
+C: Subject: Test message
+C:
+C: Hello Alice.
+C: This is a test message with 5 header fields and 4 lines in the
+C: message body.
+C: Your friend,
+C: Bob
+C: .
+S: 250 Ok: queued as 12345
+C: QUIT
+S: 221 Bye
+{The server closes the connection}
+```
+]
+
+<!-- }}}1 -->
+
+---
+
+name: email-anatomy
+
+# Anatomy of a message
+
+<!-- {{{1 -->
+
+.medium[
+```
+Return-Path: <obfusktest@gmail.com>
+Received: ...
+Message-ID: <...@gmail.com>
+Date: Sun, 08 Dec 2013 22:53:28 +0100
+From: Test User <obfusktest@gmail.com>
+User-Agent: ... Thunderbird/24.1.1
+MIME-Version: 1.0
+To: obfusktest@gmail.com
+Subject: email message
+X-Enigmail-Version: 1.6
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+Hi,
+
+This is what an email message looks like.
+```
+]
+
+<!-- }}}1 -->
+
+---
+
+template: default
+layout: true
+
+---
+
+name: email-journey
+
+# A message's journey
+
+![images/howmailworks.png](images/howmailworks.png)
+
+.small[How email works]
+
+---
+
+name: crypto
+
+# Why should I care about encryption?
+
+--> [Encryption - Why use (email) encryption?](../encryption/index.html#why)
+
+# What is public key cryptography?
+
+--> [Encryption - Public key
+cryptography](../encryption/index.html#pubkey)
 
 ---
 
 name: what
+layout: false
 
 # What's Enigmail?
 
@@ -83,26 +316,7 @@ Zimmermann.
 
 ---
 
-template: default
-layout: true
-
----
-
-name: crypto
-
-# Why should I care about encryption?
-
---> [Encryption - Why use (email) encryption?](../encryption/index.html#why)
-
-# What is public key cryptography?
-
---> [Encryption - Public key
-cryptography](../encryption/index.html#pubkey)
-
----
-
 name: prereq
-layout: false
 
 # Prerequisites
 
@@ -755,6 +969,10 @@ layout: false
 * http://www.gnupg.org
 * https://gpgtools.org (OS X)
 * http://www.gpg4win.org (Windows)
+
+<!-- -->
+
+* https://www.cryptoparty.in
 
     </textarea>
     <script src="../remark-0.5.9.min.js" type="text/javascript">

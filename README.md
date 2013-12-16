@@ -37,7 +37,8 @@
 
   * Key, mail, pencil, and padlock{,_open} images: public domain
     (Openclipart).
-  * Encryption quotes adapted from Wikipedia [1].
+  * Encryption quotes and POP3/SMTP examples adapted from Wikipedia
+    [1].
   * Privacy quotes adapted from The CryptoParty Handbook [2].
   * Remark [3]: MIT.
   * Everything else: CC-BY-SA-3.0 [4].
@@ -49,6 +50,8 @@
   --- http://en.wikipedia.org/wiki/Encryption
   --- http://en.wikipedia.org/wiki/Digital_signature
   --- http://en.wikipedia.org/wiki/Public-key_cryptography
+  --- http://en.wikipedia.org/wiki/Post_Office_Protocol
+  --- http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol
 
   [2] The CryptoParty Handbook
   --- https://www.cryptoparty.in/documentation/handbook
