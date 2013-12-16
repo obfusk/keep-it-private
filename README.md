@@ -2,7 +2,7 @@
 
     File        : README.md
     Maintainer  : Felix C. Stegerman <flx@obfusk.net>
-    Date        : 2013-12-15
+    Date        : 2013-12-16
 
     Copyright   : Copyright (C) 2013  Felix C. Stegerman
 
@@ -35,7 +35,7 @@
 
 ## License
 
-  * Key, pencil, and padlock{,_open} images: public domain
+  * Key, mail, pencil, and padlock{,_open} images: public domain
     (Openclipart).
   * Encryption quotes adapted from Wikipedia [1].
   * Privacy quotes adapted from The CryptoParty Handbook [2].
