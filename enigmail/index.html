@@ -11,7 +11,7 @@
       .medium-small { font-size: 0.7em; }
       .small        { font-size: 0.6em; }
       .remark-slide { table-layout: fixed; }
-      .nobullets ul { list-style-type: none; }
+      .nobullets ul { list-style-type: none; padding: 0; }
     </style>
   </head>
   <body>
@@ -44,7 +44,7 @@ basic cryptography tools to the general public."
 
 <br/>
 
-.small[2013-12-16]
+.small[2014-01-06]
 
 ---
 
@@ -68,11 +68,11 @@ layout: false
 
 ### Who are we?
 
-TODO
+...
 
 ### Why are we here?
 
-TODO
+...
 
 ---
 
@@ -83,32 +83,36 @@ name: toc
 .medium-small[
 
 * [Welcome](#welcome)
-* How email works:
-  - [Types of email](#email-types)
-  - [Email connections](#email-conns)
-  - [Anatomy of a message](#email-anatomy)
-  - [A message's journey](#email-journey)
-* [Why should I care about encryption? and What is public key
-cryptography?](#crypto)
-* Using encryption:
+* [Privacy](#privacy)
+* [How Email Works](#how):
+  - [Types of Email](#email-types)
+  - [A Message's Journey](#email-journey)
+  - [Email Connections](#email-conns)
+  - [Anatomy of a Message](#email-anatomy)
+* [Why Should I Care About Encryption? and What Is Public Key
+Cryptography?](#crypto)
+* [Using Encryption w/ Thunderbird & Enigmail](#using):
   - [What's Enigmail/Thunderbird/OpenPGP/GnuPG?](#what)
   - [Prerequisites](#prereq)
   - [Gmail Settings](#gmail)
-  - [Setup Thunderbird w/ Gmail](#tb-setup)
-  - [Install Enigmail](#enigmail-install)
-  - [Configure Enigmail](#enigmail-config)
-  - [Write Mail](#write-mail)
-  - [Read Mail](#read-mail)
-  - [Mail Source](#mail-source)
-  - [Attachments](#attach)
-  - [Signatures](#sigs)
-  - [Key Management](#key-mgmt)
-  - [Export Key](#export-key)
-  - [Import Key](#import-key)
-  - [Receive Key](#recv-key)
-  - [Refresh Key](#refresh-key)
-  - [Sign Key](#sign-key)
-  - Advanced:
+  - [Thunderbird & Enigmail](#tb-enig):
+    * [Setup Thunderbird w/ Gmail](#tb-setup)
+    * [Install Enigmail](#enigmail-install)
+    * [Configure Enigmail](#enigmail-config)
+  - [Mail](#mail):
+    * [Write Mail](#write-mail)
+    * [Read Mail](#read-mail)
+    * [Mail Source](#mail-source)
+    * [Attachments](#attach)
+    * [Signatures](#sigs)
+  - [Keys](#keys):
+    * [Key Management](#key-mgmt)
+    * [Export Key](#export-key)
+    * [Import Key](#import-key)
+    * [Receive Key](#recv-key)
+    * [Refresh Key](#refresh-key)
+    * [Sign Key](#sign-key)
+  - [Advanced](#adv):
     * [Miscellaneous](#misc)
     * [Rules](#rules)
     * [Generate Key Manually](#gen-key)
@@ -118,31 +122,77 @@ cryptography?](#crypto)
 
 ---
 
+template: default
+layout: true
+
+---
+
+name: privacy
+
+# Privacy
+
+&rarr; [Privacy: Basic Tips &
+Warnings](../privacy/index.html#basic-tips)
+
+---
+
+name: how
+
+# How Email Works
+
+.nobullets[
+
+* [Types of Email](#email-types)
+* [A Message's Journey](#email-journey)
+* [Email Connections](#email-conns)
+* [Anatomy of a Message](#email-anatomy)
+
+]
+
+---
+
 name: email-types
+layout: false
 
-# Types of email
+# Types of Email
 
-## How is it accessed?
+## How is it Accessed?
 
-* Webmail (e.g. Gmail): read/write mail in browser
-* IMAP: read/write mail with a mail client
-* POP3: download and read/write mail with a mail client
-* SMTP: send mail
+* **Webmail** (e.g. Gmail): read/write mail in **browser**.
+* **IMAP**: read/write mail with a mail **client**.
+* **POP3**: **download** and read/write mail with a mail **client**.
+* **SMTP**: **send** mail.
 
 ## Where is it stored?
 
-* Webmail: on the mail server of your mail provider
-* IMAP: also on mail server, with local cache
-* POP3: local (after download from mail server)
+* **Webmail**: on the mail **server** of your mail provider.
+* **IMAP**: also on mail **server**, often with local **cache**.
+* **POP3**: **local** (after **download** from mail **server**).
 
 Encrypting webmail is still rather difficult, so we will show you how
 to send and receive encrypted email using the Thunderbird mail client.
 
 ---
 
-name: email-conns
+template: default
+layout: true
 
-# Email connections
+---
+
+name: email-journey
+
+# A Message's Journey
+
+![images/howmailworks.png](images/howmailworks.png)
+
+.medium[How email works]
+
+---
+
+name: email-conns
+layout: false
+
+# Email Connections
 
 * Encrypted (POP3/IMAP/SMTP w/ SSL/TLS, HTTPS)
 * Unencrypted (POP3/IMAP/SMTP, HTTP)
@@ -151,7 +201,7 @@ name: email-conns
 
 name: pop3
 
-# POP3 anatomy
+# POP3 Anatomy
 
 <!-- {{{1 -->
 
@@ -193,7 +243,7 @@ S: +OK POP3 server signing off (maildrop empty)
 
 name: smtp
 
-# SMTP anatomy
+# SMTP Anatomy
 
 <!-- {{{1 -->
 
@@ -235,7 +285,7 @@ S: 221 Bye
 
 name: email-anatomy
 
-# Anatomy of a message
+# Anatomy of a Message
 
 <!-- {{{1 -->
 
@@ -269,26 +319,34 @@ layout: true
 
 ---
 
-name: email-journey
+name: crypto
 
-# A message's journey
+# Why Should I Care About Encryption?
 
-![images/howmailworks.png](images/howmailworks.png)
+&rarr; [Encryption - Why Use (Email) Encryption?](../encryption/index.html#why)
 
-.small[How email works]
+# What Is Public Key Cryptography?
+
+&rarr; [Encryption - Public Key
+Cryptography](../encryption/index.html#pubkey-dia)
 
 ---
 
-name: crypto
+name: using
 
-# Why should I care about encryption?
+# Using Encryption w/ Thunderbird & Enigmail
 
---> [Encryption - Why use (email) encryption?](../encryption/index.html#why)
+.nobullets[
 
-# What is public key cryptography?
+* [What's Enigmail/Thunderbird/OpenPGP/GnuPG?](#what)
+* [Prerequisites](#prereq)
+* [Gmail Settings](#gmail)
+* [Thunderbird & Enigmail](#tb-enig)
+* [Mail](#mail)
+* [Keys](#keys)
+* [Advanced](#adv)
 
---> [Encryption - Public key
-cryptography](../encryption/index.html#pubkey)
+]
 
 ---
 
@@ -297,22 +355,24 @@ layout: false
 
 # What's Enigmail?
 
-> Enigmail is a security extension to Mozilla Thunderbird (and
-Seamonkey) that enables you to write and receive email messages signed
-and/or encrypted with the OpenPGP standard (using GnuPG).
+> Enigmail is a security **extension** to Mozilla **Thunderbird** (and
+Seamonkey) that enables you to write and receive **email** messages
+**signed** and/or **encrypted** with the **OpenPGP** standard (using
+GnuPG).
 
 # What's Thunderbird?
 
-> Mozilla Thunderbird is a free software cross-platform email, news,
-and chat client developed by the Mozilla Foundation.
+> Mozilla Thunderbird is a **free software** cross-platform **email**,
+news, and chat **client** developed by the Mozilla Foundation.
 
 # What are OpenPGP and GnuPG?
 
-> OpenPGP is a standard protocol for encrypting email using public key
-cryptography.  It is based on PGP as originally developed by Phil
-Zimmermann.
+> OpenPGP is a **standard** protocol for **encrypting** email using
+public key cryptography.  It is based on PGP as originally developed
+by Phil Zimmermann.
 
-> GnuPG is a free software implementation of the OpenPGP standard.
+> GnuPG is a **free software** implementation of the **OpenPGP**
+standard.
 
 ---
 
@@ -361,11 +421,23 @@ name: gmail
 
 # Gmail Settings
 
----
-
 ![screens/gmail_imap.png](screens/gmail_imap.png)
 
-.small[Activate IMAP for Gmail]
+.medium[Activate IMAP for Gmail]
+
+---
+
+name: tb-enig
+
+# Thunderbird & Enigmail
+
+.nobullets[
+
+* [Setup Thunderbird w/ Gmail](#tb-setup)
+* [Install Enigmail](#enigmail-install)
+* [Configure Enigmail](#enigmail-config)
+
+]
 
 ---
 
@@ -377,25 +449,25 @@ name: tb-setup
 
 ![screens/tb_welcome.png](screens/tb_welcome.png)
 
-.small[Welcome to Thunderbird]
+.medium[Welcome to Thunderbird]
 
 ---
 
 ![screens/tb_setup_account.png](screens/tb_setup_account.png)
 
-.small[Thunderbird Account Setup - Step #1]
+.medium[Thunderbird Account Setup - Step #1]
 
 ---
 
 ![screens/tb_setup_gmail.png](screens/tb_setup_gmail.png)
 
-.small[Thunderbird Account Setup - Step #2]
+.medium[Thunderbird Account Setup - Step #2]
 
 ---
 
 ![screens/tb_main.png](screens/tb_main.png)
 
-.small[Thunderbird Main Window]
+.medium[Thunderbird Main Window]
 
 ---
 
@@ -407,13 +479,13 @@ name: enigmail-install
 
 ![screens/tb_addons.png](screens/tb_addons.png)
 
-.small[Install Enigmail with Thunderbird Add-ons Manager]
+.medium[Install Enigmail with Thunderbird Add-ons Manager]
 
 ---
 
 ![screens/tb_restart_now.png](screens/tb_restart_now.png)
 
-.small[Restart Thunderbird after Enigmail Install]
+.medium[Restart Thunderbird after Enigmail Install]
 
 ---
 
@@ -421,59 +493,70 @@ name: enigmail-config
 
 # Configure Enigmail
 
+If you want more control over key generation, see [Generate Key
+Manually](#gen-key).
+
+.nobullets[
+
+* Use the Wizard
+* Create a Key Pair
+* Create a Revocation Certificate
+
+]
+
 ---
 
 ![screens/wizard_step_1.png](screens/wizard_step_1.png)
 
-.small[Enigmail Wizard - Step #1]
+.medium[Enigmail Wizard - Step #1]
 
 ---
 
 ![screens/wizard_step_2.png](screens/wizard_step_2.png)
 
-.small[Enigmail Wizard - Step #2]
+.medium[Enigmail Wizard - Step #2]
 
 ---
 
 ![screens/wizard_step_3.png](screens/wizard_step_3.png)
 
-.small[Enigmail Wizard - Step #3]
+.medium[Enigmail Wizard - Step #3]
 
 ---
 
 ![screens/wizard_step_4.png](screens/wizard_step_4.png)
 
-.small[Enigmail Wizard - Step #4]
+.medium[Enigmail Wizard - Step #4]
 
 ---
 
 ![screens/wizard_step_5.png](screens/wizard_step_5.png)
 
-.small[Enigmail Wizard - Step #5]
+.medium[Enigmail Wizard - Step #5]
 
 ---
 
 ![screens/wizard_step_6.png](screens/wizard_step_6.png)
 
-.small[Enigmail Wizard - Step #6]
+.medium[Enigmail Wizard - Step #6]
 
 ---
 
 ![screens/wizard_step_7.png](screens/wizard_step_7.png)
 
-.small[Enigmail Wizard - Step #7]
+.medium[Enigmail Wizard - Step #7]
 
 ---
 
 ![screens/wizard_step_8.png](screens/wizard_step_8.png)
 
-.small[Enigmail Wizard - Step #8]
+.medium[Enigmail Wizard - Step #8]
 
 ---
 
 ![screens/wizard_q_revoke.png](screens/wizard_q_revoke.png)
 
-.small[Enigmail Wizard - Generate Revocation Certificate?]
+.medium[Enigmail Wizard - Generate Revocation Certificate?]
 
 Keep it safe! And be careful with file and directory permissions!
 
@@ -481,7 +564,7 @@ Keep it safe! And be careful with file and directory permissions!
 
 ![screens/enter_pass.png](screens/enter_pass.png)
 
-.small[Enter Passphrase]
+.medium[Enter Passphrase]
 
 YMMV.
 
@@ -489,19 +572,35 @@ YMMV.
 
 ![screens/wizard_save_revoke.png](screens/wizard_save_revoke.png)
 
-.small[Enigmail Wizard - Save Revocation Certificate]
+.medium[Enigmail Wizard - Save Revocation Certificate]
 
 ---
 
 ![screens/wizard_revoke_saved.png](screens/wizard_revoke_saved.png)
 
-.small[Enigmail Wizard - Revocation Certificate Saved]
+.medium[Enigmail Wizard - Revocation Certificate Saved]
 
 ---
 
 ![screens/wizard_done.png](screens/wizard_done.png)
 
-.small[Enigmail Wizard - Done]
+.medium[Enigmail Wizard - Done]
+
+---
+
+name: mail
+
+# Mail
+
+.nobullets[
+
+* [Write Mail](#write-mail)
+* [Read Mail](#read-mail)
+* [Mail Source](#mail-source)
+* [Attachments](#attach)
+* [Signatures](#sigs)
+
+]
 
 ---
 
@@ -509,29 +608,37 @@ name: write-mail
 
 # Write Mail
 
+.nobullets[
+
+* Signed
+* Signed & Encrypted
+* Unsigned & Unencrypted (Normal)
+
+]
+
 ---
 
 ![screens/tb_write.png](screens/tb_write.png)
 
-.small[Thunderbird Write]
+.medium[Thunderbird Write]
 
 ---
 
 ![screens/tb_write_1.png](screens/tb_write_1.png)
 
-.small[Thunderbird Write - Signed]
+.medium[Thunderbird Write - Signed]
 
 ---
 
 ![screens/tb_write_2.png](screens/tb_write_2.png)
 
-.small[Thunderbird Write - Signed & Encrypted]
+.medium[Thunderbird Write - Signed & Encrypted]
 
 ---
 
 ![screens/tb_write_3.png](screens/tb_write_3.png)
 
-.small[Thunderbird Write - Unsigned & Unencrypted (Normal)]
+.medium[Thunderbird Write - Unsigned & Unencrypted (Normal)]
 
 ---
 
@@ -539,29 +646,45 @@ name: read-mail
 
 # Read Mail
 
+.nobullets[
+
+* Signed
+* Signed & Encrypted
+* Unsigned & Unencrypted (Normal)
+
+]
+
 ---
 
 ![screens/tb_mail_1.png](screens/tb_mail_1.png)
 
-.small[Thunderbird Read - Signed]
+.medium[Thunderbird Read - Signed]
 
 ---
 
 ![screens/tb_mail_2.png](screens/tb_mail_2.png)
 
-.small[Thunderbird Read - Signed & Encrypted]
+.medium[Thunderbird Read - Signed & Encrypted]
 
 ---
 
 ![screens/tb_mail_3.png](screens/tb_mail_3.png)
 
-.small[Thunderbird Read - Unsigned & Unencrypted (Normal)]
+.medium[Thunderbird Read - Unsigned & Unencrypted (Normal)]
 
 ---
 
 name: mail-source
 
 # Mail Source
+
+.nobullets[
+
+* Signed
+* Signed & Encrypted
+* Unsigned & Unencrypted (Normal)
+
+]
 
 ---
 
@@ -692,11 +815,9 @@ name: attach
 
 # Attachments
 
----
-
 ![screens/enigmail_attachments.png](screens/enigmail_attachments.png)
 
-.small[Sending Encrypted Attachements]
+.medium[Sending Encrypted Attachements]
 
 ---
 
@@ -704,23 +825,48 @@ name: sigs
 
 # Signatures
 
+.nobullets[
+
+* Unverified (Unknown Key)
+* Untrusted (Known Key, Not Trusted)
+* Good (Known Key, Trusted)
+
+]
+
 ---
 
 ![screens/tb_mail_4_unknown.png](screens/tb_mail_4_unknown.png)
 
-.small[Unverified Signature]
+.medium[Unverified Signature (Unknown Key)]
 
 ---
 
 ![screens/tb_mail_4_untrusted.png](screens/tb_mail_4_untrusted.png)
 
-.small[Untrusted Signature]
+.medium[Untrusted Signature (Known Key, Not Trusted)]
 
 ---
 
 ![screens/tb_mail_4_signed_key.png](screens/tb_mail_4_signed_key.png)
 
-.small[Good Signature]
+.medium[Good Signature (Known Key, Trusted)]
+
+---
+
+name: keys
+
+# Keys
+
+.nobullets[
+
+* [Key Management](#key-mgmt)
+* [Export Key](#export-key)
+* [Import Key](#import-key)
+* [Receive Key](#recv-key)
+* [Refresh Key](#refresh-key)
+* [Sign Key](#sign-key)
+
+]
 
 ---
 
@@ -728,35 +874,44 @@ name: key-mgmt
 
 # Key Management
 
+.nobullets[
+
+* Key Management Interface
+* Key Properties
+* Key Actions
+* Key Menu
+
+]
+
 ---
 
 ![screens/enigmail_key_management.png](screens/enigmail_key_management.png)
 
-.small[Enigmail Key Management]
+.medium[Enigmail Key Management]
 
 ---
 
 ![screens/enigmail_key_management_all.png](screens/enigmail_key_management_all.png)
 
-.small[Enigmail Key Management - Show All]
+.medium[Enigmail Key Management - Show All]
 
 ---
 
 ![screens/enigmail_key_props.png](screens/enigmail_key_props.png)
 
-.small[Enigmail Key Management - Key Properties]
+.medium[Enigmail Key Management - Key Properties]
 
 ---
 
 ![screens/enigmail_key_actions.png](screens/enigmail_key_actions.png)
 
-.small[Enigmail Key Management - Key Actions]
+.medium[Enigmail Key Management - Key Actions]
 
 ---
 
 ![screens/enigmail_key_management_menu.png](screens/enigmail_key_management_menu.png)
 
-.small[Enigmail Key Management - Key Menu]
+.medium[Enigmail Key Management - Key Menu]
 
 ---
 
@@ -764,23 +919,34 @@ name: export-key
 
 # Export Key
 
+You'll need to export your public key to be able send it to someone
+else.  Or you can publish it on a key server.
+
+.nobullets[
+
+* Export
+* Save
+* Send
+
+]
+
 ---
 
 ![screens/enigmail_key_management_export.png](screens/enigmail_key_management_export.png)
 
-.small[Enigmail Key Management - Export]
+.medium[Enigmail Key Management - Export]
 
 ---
 
 ![screens/enigmail_key_management_export_save.png](screens/enigmail_key_management_export_save.png)
 
-.small[Enigmail Key Management - Export - Save]
+.medium[Enigmail Key Management - Export - Save]
 
 ---
 
 ![screens/tb_write_send_key.png](screens/tb_write_send_key.png)
 
-.small[Enigmail Key Management - Export & Send]
+.medium[Enigmail Key Management - Export & Send]
 
 ---
 
@@ -788,17 +954,20 @@ name: import-key
 
 # Import Key
 
+If someone's sent you a public key, you'll need to import it to use
+it.
+
 ---
 
 ![screens/enigmail_key_management_import_step_1.png](screens/enigmail_key_management_import_step_1.png)
 
-.small[Enigmail Key Management - Import - Step #1]
+.medium[Enigmail Key Management - Import - Step #1]
 
 ---
 
 ![screens/enigmail_key_management_import_step_2.png](screens/enigmail_key_management_import_step_2.png)
 
-.small[Enigmail Key Management - Import - Step #2]
+.medium[Enigmail Key Management - Import - Step #2]
 
 ---
 
@@ -806,29 +975,32 @@ name: recv-key
 
 # Receive Key
 
+If someone has published their public key on a key server, you can
+receive it from there.
+
 ---
 
 ![screens/enigmail_recv_key_step_1.png](screens/enigmail_recv_key_step_1.png)
 
-.small[Enigmail Key Management - Receive Key - Step #1]
+.medium[Enigmail Key Management - Receive Key - Step #1]
 
 ---
 
 ![screens/enigmail_recv_key_step_2.png](screens/enigmail_recv_key_step_2.png)
 
-.small[Enigmail Key Management - Receive Key - Step #2]
+.medium[Enigmail Key Management - Receive Key - Step #2]
 
 ---
 
 ![screens/enigmail_recv_key_step_3.png](screens/enigmail_recv_key_step_3.png)
 
-.small[Enigmail Key Management - Receive Key - Step #3]
+.medium[Enigmail Key Management - Receive Key - Step #3]
 
 ---
 
 ![screens/enigmail_key_management_w_obfusk.png](screens/enigmail_key_management_w_obfusk.png)
 
-.small[Enigmail Key Management - With Received Key]
+.medium[Enigmail Key Management - With Received Key]
 
 ---
 
@@ -836,11 +1008,14 @@ name: refresh-key
 
 # Refresh Key
 
+You should refresh keys to get up-to-date signatures, expirations, and
+revocations.
+
 ---
 
 ![screens/enigmail_key_management_refreshed.png](screens/enigmail_key_management_refreshed.png)
 
-.small[Enigmail Key Management - Refresh Key]
+.medium[Enigmail Key Management - Refresh Key]
 
 ---
 
@@ -848,23 +1023,37 @@ name: sign-key
 
 # Sign Key
 
+Sign a key when you have **checked** and **verified** that a certain
+public key belongs to a certain person (who is in control of the
+accompanying private key).
+
+.nobullets[
+
+* Check the **fingerprint** to make sure you have the right key.
+* Make sure the **person** is who he says he is.
+
+]
+
+You can keep your signatures **local** or participate in the **web of
+trust**.
+
 ---
 
 ![screens/enigmail_key_management_sign.png](screens/enigmail_key_management_sign.png)
 
-.small[Enigmail Key Management - Choose to Sign Key]
+.medium[Enigmail Key Management - Choose to Sign Key]
 
 ---
 
 ![screens/enigmail_sign_sender_key.png](screens/enigmail_sign_sender_key.png)
 
-.small[Thunderbird Read - Choose to Sign Sender's Key]
+.medium[Thunderbird Read - Choose to Sign Sender's Key]
 
 ---
 
 ![screens/enigmail_sign_key_local.png](screens/enigmail_sign_key_local.png)
 
-.small[Enigmail Key Management - Sign Key (Locally)]
+.medium[Enigmail Key Management - Sign Key (Locally)]
 
 Make sure to check the fingerprint!
 
@@ -872,7 +1061,21 @@ Make sure to check the fingerprint!
 
 ![screens/enigmail_sigs.png](screens/enigmail_sigs.png)
 
-.small[Enigmail Key Management - Signatures]
+.medium[Enigmail Key Management - Signatures]
+
+---
+
+name: adv
+
+# Advanced
+
+.nobullets[
+
+* [Miscellaneous](#misc)
+* [Rules](#rules)
+* [Generate Key Manually](#gen-key)
+
+]
 
 ---
 
@@ -880,26 +1083,40 @@ name: misc
 
 # Miscellaneous
 
+.nobullets[
+
+* Encrypt to Unknown Recipient
+* Expert Settings
+* Always Trust & Always Confirm
+
+]
+
 ---
 
 ![screens/enigmail_unknown_recipient.png](screens/enigmail_unknown_recipient.png)
 
-.small[Enigmail - Encrypt to Unknown Recipient]
+.medium[Enigmail - Encrypt to Unknown Recipient]
 
 ---
 
 ![screens/enigmail_prefs_expert.png](screens/enigmail_prefs_expert.png)
 
-.small[Enigmail Preferences - Expert]
+.medium[Enigmail Preferences - Expert]
 
 ---
 
 ![screens/enigmail_prefs_alwaystrust.png](screens/enigmail_prefs_alwaystrust.png)
 
-.small[Enigmail Preferences - Always Trust?]
+.medium[Enigmail Preferences - Always Trust & Always Confirm]
 
-This allows you to encrypt messages to untrusted keys (i.e. keys that
-are not in your web of trust).
+.nobullets[
+
+* **Always Trust** allows you to encrypt messages to untrusted keys
+  (i.e. keys that are not in your web of trust).
+* **Always Confirm** makes Enigmail confirm encryption and signing
+  before sending.
+
+]
 
 ---
 
@@ -907,23 +1124,34 @@ name: rules
 
 # Rules
 
+You can define rules for setting encryption and signing for every
+recipient and to define what key(s) to use.
+
+.nobullets[
+
+* Key Selection
+* Rules
+* Add Rule
+
+]
+
 ---
 
 ![screens/enigmail_prefs_key_sel.png](screens/enigmail_prefs_key_sel.png)
 
-.small[Enigmail Preferences - Key Selection]
+.medium[Enigmail Preferences - Key Selection]
 
 ---
 
 ![screens/enigmail_prefs_rules.png](screens/enigmail_prefs_rules.png)
 
-.small[Enigmail Preferences - Rules]
+.medium[Enigmail Preferences - Rules]
 
 ---
 
 ![screens/enigmail_prefs_add_rule.png](screens/enigmail_prefs_add_rule.png)
 
-.small[Enigmail Preferences - Add Rule]
+.medium[Enigmail Preferences - Add Rule]
 
 ---
 
@@ -931,23 +1159,34 @@ name: gen-key
 
 # Generate Key Manually
 
+If you want more control over key generation (e.g. expiration and key
+size):
+
+.nobullets[
+
+* Cancel the Wizard
+* Generate a Key Manually
+* Run the Wizard and Use Your Existing Key
+
+]
+
 ---
 
 ![screens/enigmail_gen_tab_1.png](screens/enigmail_gen_tab_1.png)
 
-.small[Enigmail Generate Key - Tab #1]
+.medium[Enigmail Generate Key - Tab #1]
 
 ---
 
 ![screens/enigmail_gen_tab_2.png](screens/enigmail_gen_tab_2.png)
 
-.small[Enigmail Generate Key - Tab #2]
+.medium[Enigmail Generate Key - Tab #2]
 
 ---
 
 ![screens/enigmail_use_existing_key.png](screens/enigmail_use_existing_key.png)
 
-.small[Enigmail Wizard - Use Existing Key]
+.medium[Enigmail Wizard - Use Existing Key]
 
 ---
 
