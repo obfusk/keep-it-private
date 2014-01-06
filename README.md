@@ -2,9 +2,9 @@
 
     File        : README.md
     Maintainer  : Felix C. Stegerman <flx@obfusk.net>
-    Date        : 2013-12-31
+    Date        : 2014-01-06
 
-    Copyright   : Copyright (C) 2013  Felix C. Stegerman
+    Copyright   : Copyright (C) 2014  Felix C. Stegerman
 
 []: }}}1
 
@@ -24,7 +24,6 @@
       (almost done)
   * [Privacy (and the Internet)](privacy/index.html)
       (work in progress)
-  * ...
 
 []: }}}1
 
