@@ -19,11 +19,9 @@
 ### Presentations:
 
   * [Encryption](encryption/index.html)
-      (almost done)
   * [Email Privacy w/ Enigmail](enigmail/index.html)
-      (almost done)
   * [Privacy (and the Internet)](privacy/index.html)
-      (work in progress)
+      (almost done)
 
 []: }}}1
 
