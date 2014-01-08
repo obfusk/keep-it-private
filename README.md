@@ -41,11 +41,11 @@
 []: {{{1
 
   [1] Wikipedia Articles:
-  * http://en.wikipedia.org/wiki/Encryption
-  * http://en.wikipedia.org/wiki/Digital_signature
-  * http://en.wikipedia.org/wiki/Public-key_cryptography
-  * http://en.wikipedia.org/wiki/Post_Office_Protocol
-  * http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol
+  * https://en.wikipedia.org/wiki/Encryption
+  * https://en.wikipedia.org/wiki/Digital_signature
+  * https://en.wikipedia.org/wiki/Public-key_cryptography
+  * https://en.wikipedia.org/wiki/Post_Office_Protocol
+  * https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol
 
 #
 
@@ -56,7 +56,7 @@
   --- https://github.com/gnab/remark
 
   [4] Creative Commons Attribution-ShareAlike 3.0 Unported
-  --- http://creativecommons.org/licenses/by-sa/3.0
+  --- https://creativecommons.org/licenses/by-sa/3.0
 
 []: }}}1
 
