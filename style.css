@@ -1,0 +1,7 @@
+body          { font-family: sans-serif; font-size: 19px; }
+img           { max-width: 100%; }
+.medium       { font-size: 0.8em; }
+.medium-small { font-size: 0.7em; }
+.small        { font-size: 0.6em; }
+.remark-slide { table-layout: fixed; }
+.nobullets ul { list-style-type: none; padding: 0; }
