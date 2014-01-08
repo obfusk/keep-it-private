@@ -27,16 +27,16 @@ layout: false
 
 # Table of Contents
 
-* [Why use (email) encryption?](#why)
-* [How can encryption protect my secrets?](#how)
-* [What can't encryption do?](#what-not)
-* [There's more to privacy than encryption](#privacy)
-* [What is encryption?](#what)
-* [What are digital signatures?](#what-sig)
-* [Kinds of encryption](#kinds)
-* [Symmetric key cryptography](#symm)
-* [Public key cryptography](#pubkey)
-* [Using encryption](#using)
+* [Why Use (Email) Encryption?](#why)
+* [How Can Encryption Protect My Secrets?](#how)
+* [What Can't Encryption Do?](#what-not)
+* [There's More to Privacy Than Encryption](#privacy)
+* [What Is Encryption?](#what)
+* [What Are Digital Signatures?](#what-sig)
+* [Kinds of Encryption](#kinds)
+* [Symmetric Key Cryptography](#symm)
+* [Public Key Cryptography](#pubkey)
+* [Using Encryption](#using)
 * ...
 * [Links](#links)
 
@@ -44,7 +44,7 @@ layout: false
 
 name: why
 
-# Why use (email) encryption?
+# Why Use (Email) Encryption?
 
 Because no-one has "nothing to hide".  Everyone has something to hide
 -- having secrets has nothing to do with doing anything illegal or
@@ -73,7 +73,7 @@ writing it on a postcard for all to see.
 
 ---
 
-## We can't know what secrets we will have (to keep) tomorrow
+## We Can't Know What Secrets We Will Have (to Keep) Tomorrow
 
 We have no way of knowing today what secrets we will have to keep
 tomorrow.  We may suddenly find that something we did which was
@@ -86,7 +86,7 @@ can use it against us (in ways we may not expect) in the future.
 
 name: how
 
-# How can encryption protect my secrets?
+# How Can Encryption Protect My Secrets?
 
 Encryption allows you to securely store and/or transmit messages and
 data; and to verify that a message was not modified in transit and was
@@ -113,7 +113,7 @@ created by a known sender.
 
 name: what-not
 
-# What can't encryption do?
+# What Can't Encryption Do?
 
 Encryption can't protect you against what other people do with the
 information you give them.  You'll still need to trust them.
@@ -135,7 +135,7 @@ themselves can do that.
 
 name: privacy
 
-# There's more to privacy than encryption
+# There's More to Privacy Than Encryption
 
 Encryption is only part of privacy protection.  Sending encrypted
 email does not protect you against people/corporations/governments
@@ -151,7 +151,7 @@ Encryption does not prevent tracking and does not provide anonymity.
 
 name: what
 
-# What is encryption?
+# What Is Encryption?
 
 > Encryption is the process of **encoding messages (or information) in
 such a way that third parties cannot read it, and only authorized
@@ -173,7 +173,7 @@ adversaries do not have access to.
 
 name: what-sig
 
-# What are digital signatures?
+# What Are Digital Signatures?
 
 > A digital signature is a mathematical scheme for **demonstrating the
 authenticity of a digital message or document**.  A valid digital
@@ -189,15 +189,15 @@ detect forgery or tampering.
 
 name: kinds
 
-# Kinds of encryption
+# Kinds of Encryption
 
-## Symmetric key encryption
+## Symmetric Key Encryption
 
 > In Symmetric-key schemes, the encryption and decryption keys are the
 same.  Thus communicating parties must agree on a secret key before
 they wish to communicate.
 
-## Public key encryption
+## Public Key Encryption
 
 > In public-key encryption schemes, the encryption key is **published
 for anyone to use and encrypt messages**.  However, **only the
@@ -210,7 +210,7 @@ symmetric-key (also called private-key) schemes.
 
 name: symm
 
-# Symmetric key cryptography
+# Symmetric Key Cryptography
 
 > Symmetric-key cryptography uses the same keys for both encryption of
 plaintext and decryption of ciphertext.  The keys, in practice,
@@ -222,7 +222,7 @@ encryption.  This is also known as private key encryption.
 
 ---
 
-## Sending a message using symmetric-key encryption
+## Sending a Message Using Symmetric-key Encryption
 
 When Alice wants to send a message to Bob, she encrypts the message
 (plaintext) with the shared key and can now send the ciphertext to Bob
@@ -249,7 +249,7 @@ layout: true
 
 layout: false
 
-## Using a USB flash drive encrypted using symmetric-key cryptography
+## Using a USB Flash Drive Encrypted Using Symmetric-key Cryptography
 
 John has created an encrypted USB flash drive.  When he connects it to
 his computer, he is prompted for his key (passphrase).  When he enters
@@ -260,7 +260,7 @@ without his key will only see garbage.
 
 name: pubkey
 
-# Public key cryptography
+# Public Key Cryptography
 
 > Public-key cryptography, also known as asymmetric cryptography,
 requires **two separate keys, one of which is secret (or private) and
@@ -286,7 +286,7 @@ the presence of the unique seal authenticates the sender.
 
 ---
 
-## Sending a message using public-key encryption
+## Sending a Message Using Public-key Encryption
 
 When Alice wants to send a message to Bob, she encrypts the message
 (plaintext) with his public key and can now send the ciphertext to Bob
@@ -324,9 +324,9 @@ name: pubkey-dia
 name: using
 layout: false
 
-# Using encryption
+# Using Encryption
 
-## Hard disks and USB flash drives
+## Hard Disks and USB Flash Drives
 
 ### Linux
 
@@ -344,7 +344,7 @@ GnuPG to allow you to send and receive encrypted email.
 
 ---
 
-## Send all email encrypted
+## Send All Email Encrypted
 
 You should sign and encrypt all of your messages, not just the most
 sensitive ones.  If you only encrypt that single email with your
