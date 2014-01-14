@@ -2,7 +2,7 @@
 
     File        : README.md
     Maintainer  : Felix C. Stegerman <flx@obfusk.net>
-    Date        : 2014-01-08
+    Date        : 2014-01-14
 
     Copyright   : Copyright (C) 2014  Felix C. Stegerman
 
@@ -31,9 +31,10 @@
     (Openclipart).
   * Encryption quotes and POP3/SMTP examples adapted from Wikipedia
     [1].
-  * Privacy quotes adapted from The CryptoParty Handbook [2].
-  * Remark [3]: MIT.
-  * Everything else: CC-BY-SA-3.0 [4].
+  * Some quotes from Eben Moglen [2].
+  * Some quotes adapted from The CryptoParty Handbook [3].
+  * Remark [4]: MIT.
+  * Everything else: CC-BY-SA-3.0 [5].
 
 ## References
 []: {{{1
@@ -47,13 +48,16 @@
 
 #
 
-  [2] The CryptoParty Handbook
+  [2] Eben Moglen: Snowden and the Future
+  --- http://snowdenandthefuture.info
+
+  [3] The CryptoParty Handbook
   --- https://www.cryptoparty.in/documentation/handbook
 
-  [3] Remark
+  [4] Remark
   --- https://github.com/gnab/remark
 
-  [4] Creative Commons Attribution-ShareAlike 3.0 Unported
+  [5] Creative Commons Attribution-ShareAlike 3.0 Unported
   --- https://creativecommons.org/licenses/by-sa/3.0
 
 []: }}}1
