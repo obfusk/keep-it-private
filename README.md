@@ -2,7 +2,7 @@
 
     File        : README.md
     Maintainer  : Felix C. Stegerman <flx@obfusk.net>
-    Date        : 2014-01-14
+    Date        : 2014-01-27
 
     Copyright   : Copyright (C) 2014  Felix C. Stegerman
 
@@ -18,14 +18,26 @@
 
 ### Presentations:
 
+#### English:
+
   * [Encryption](encryption/index.html)
   * [Email Privacy w/ Enigmail](enigmail/index.html)
   * [Privacy (and the Internet)](privacy/index.html)
       (almost done)
 
+#### Nederlands:
+
+  * [Versleuteling](encryption-nl/index.html)
+    (nog niet vertaald)
+  * [Email Privacy met Enigmail](enigmail-nl/index.html)
+    (nog niet vertaald)
+  * [Privacy (en het Internet)](privacy-nl/index.html)
+    (nog niet vertaald)
+
 []: }}}1
 
 ## License
+[]: {{{1
 
   * Key, mail, pencil, and padlock{,_open} images: public domain
     (Openclipart).
@@ -35,6 +47,8 @@
   * Some quotes adapted from The CryptoParty Handbook [3].
   * Remark [4]: MIT.
   * Everything else: CC-BY-SA-3.0 [5].
+
+[]: }}}1
 
 ## References
 []: {{{1
