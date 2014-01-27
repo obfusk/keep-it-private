@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="content-type"
       content="text/html; charset=utf-8" />
-    <title>Privacy (and the Internet)</title>
+    <title>Privacy (en het Internet)</title>
     <link rel="stylesheet" type="text/css" href="../style.css" />
   </head>
   <body>
@@ -15,104 +15,115 @@ layout: true
 
 ---
 
-# Privacy (and the Internet)
+# Privacy (en het Internet)
 
 Felix C. Stegerman `<flx@obfusk.net>`
 
-.small[2014-01-13]
+.small[2014-01-27]
 
-.small[(press space for next slide, ? for help)]
+.small[(druk op de spatiebalk om naar de volgende slide te gaan, druk
+op ? voor hulp)]
 
 ---
 
 layout: false
 
-# Table of Contents
+# Inhoudsopgave
 
-* [Why Privacy Matters](#why)
-  - [As Eben Moglen Puts It](#moglen)
-  - [From the CryptoParty Handbook](#cryptoparty)
-* [Basic Tips](#basic-tips)
-* [Warnings](#warnings)
-* [Fears](#fears)
+* [Het Belang van Privacy](#why)
+  - [Volgens Eben Moglen](#moglen)
+  - [Volgens het CryptoParty Handbook](#cryptoparty)
+* [Basistips](#basic-tips)
+* [Waarschuwingen](#warnings)
+* [Angsten](#fears)
 * [Resources](#resources)
-* [The Necessity of Free Software](#free-sw)
-* Privacy Threats and Mitigation Tools:
-  - [Browsing](#browsing)
-  - [Social Networking](#social)
+* [De Noodzaak van Vrije Software](#free-sw)
+* Privacybedreigingen en Tools:
+  - [Browsen](#browsing)
+  - [Sociale Netwerken](#social)
   - [Tracking](#tracking)
-  - [Anonymity](#anon)
-  - [Secure Calls and SMS](#secure-calls)
+  - [Anonimiteit](#anon)
+  - [Veilig Bellen en SMS'en](#secure-calls)
 * [Links](#links)
 
 ---
 
 name: why
 
-# Why Privacy Matters
+# Het Belang van Privacy
 
-Because **knowlege is power**.
+.normal-medium[
 
-.medium[
+Want **kennis is macht**.
 
-> Franz Kafka's *The Trial*: "A man is arrested and prosecuted;
-**everything is secret**, from the charge, to the rules of the court,
-to the authority behind the courts.  An inaccessible, inscrutable
-bureaucratic authority uses **people's information** to make
-**important decisions** about them, whilst **denying them access** to
-what information is **gathered** and how it is **used**."
+> Franz Kafka's *Het proces*: "A man wordt gearresteerd en vervolgd;
+**alles is geheim**, van de aanklacht, tot de regels van de rechtbank,
+tot de autoriteit achter de rechtbanken.  Een ontoegankelijke,
+ondoorgrondelijke bureaucratische autoriteit gebruikt **de informatie
+van mensen** om **belangrijke beslissingen** over hen te nemen,
+terwijl **ze geen toegang hebben** tot welke informatie **verzameld**
+wordt en hoe deze wordt **bewaard**.
+
+Privacy gaat **niet over het verbergen van slechte dingen**.
+Schijnbaar **onschuldige gegevens** kunnen worden verzameld,
+**samengevoegd** en **geanalyseerd** om zo veel meer te worden dan de
+som der delen.  Het creëert een **machtsongelijkheid** tussen mensen
+en overheden (of bedrijven).
+
+Wanneer gegevens worden samengevoegd en geanalyseerd, zonder
+**verantwoordingsplicht**, zonder **toegang** tot de eigen gegevens,
+en zonder mogelijkheden om **fouten** en **verdraaiing** te
+corrigeren, zullen **verkeerde conclusies** worden getrokken.  Uw
+**patroon van activiteiten** kan bijvoorbeeld ten onrechte worden
+**geïnterpreteerd als crimineel**.
+
+En tot nu toe hebben we **goede bedoelingen** aangenomen; stelt u zich
+voor wat **onvoorzichtigheid**, **nalatigheid** en **kwaadaardige
+bedoelingen** kunnen doen.
+
+En daar bovenop zorgt **in de gaten gehouden worden** voor
+**zelfcensuur** en **sociale controle**.  **Diefstal van gegevens**
+kan leiden tot **identiteitsdiefstal**, **afpersing**, enz.  En wat
+vandaag onschuldige informatie lijkt, is **morgen** misschien iets dat
+men moet verbergen.
 
 ]
-
-Privacy is **not about hiding bad things**.  Seemingly **innocuous
-data** can be gathered, **aggregated** and **analysed** to become much
-more than the sum of its parts.  It creates a **power imbalance**
-between people and governments (or corporations).
-
-When data is aggregated and analysed, with no **accountability**, no
-**access** to one's data, and no possibility to correct **errors** and
-**distortion**, **faulty inferences** will be drawn.  For example,
-your **pattern of activities** might be incorrectly **construed as
-criminal**.
-
-And so far we've assumed **good intentions**; imagine what
-**carelessness**, **incompetence** and **malice** can do.
-
-On top of this, **surveillance** results in **inhibition** and
-**social control**.  **Data theft** can lead to **identity theft**,
-**blackmail**, etc.  And what seems like harmless information today,
-may become something you need to hide **tomorrow**.
 
 ---
 
 name: moglen
 
-## As Eben Moglen Puts It:
+## Volgens Eben Moglen
 
-### Privacy Really Means Three Things
+### Privacy Betekent Eigenlijk Drie Dingen
 
-* **Secrecy**: our ability to keep messages "private", so that their
-content is known only to those who we intend to receive them.
+* **Geheimhouding**: ons vermogen om berichten "privé" te houden,
+zodat de inhoud ervan alleen bekend is bij de beoogde ontvanger(s).
 
-* **Anonymity**: our ability to keep our messages -- even when their
-content is open -- obscure as to who has published them and who is
-receiving them.  It is very important that anonymity is an interest we
-can have in both our publishing and our reading.
+* **Anonimiteit**: ons vermogen de verzender en ontvanger van onze
+berichten onbekend te houden, zelfs als hun inhoud openbaar is.  Het
+is van groot belang dat we anoniem kunnen publiceren en lezen.
 
-* **Autonomy**: our ability to make our life decisions free of any
-force which has violated our secrecy or our anonymity.
+* **Autonomie**: ons vermogen om beslissingen in het leven te nemen,
+vrij van de invloed van diegenen die onze geheimhouding of onze
+anonimiteit hebben geschonden.
 
-### And
+### En
 
-> Privacy is a **requirement** of **democratic self-government**.
+> Privacy is een **voorwaarde** voor **democratisch zelfbestuur**.
 
-> Our **government** must **defend us** against pervasive **spying**
-by outsiders, and our government must **subject listening** to the
-**rule of law** at home.
+> Onze **regering** moet **ons beschermen** tegen alomtegenwoordige
+**spionage** door buitenstaanders, en onze regering moet **afluisteren
+onderwerpen** aan onze **rechtsstaat**.
 
-> The **anonymity of reading** is the central, fundamental guarantor
-of freedom of the mind.  Without anonymity in reading there is no
-**freedom of the mind**.  Indeed, there is literally slavery.
+> De **anonimiteit van het lezen** is de centrale, fundamentele
+waarborg van de vrijheid van denken.  Zonder **anonimiteit van het
+lezen** is er geen **vrijheid van denken**.  Sterker nog, er is
+letterlijk slavernij.
+
+---
+
+# NOG NIET VERTAALD VANAF HIER
 
 ---
 
